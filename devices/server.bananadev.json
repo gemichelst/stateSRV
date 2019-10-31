@@ -1,0 +1,23 @@
+{
+	"GENERATED_AT": "Donnerstag, 31 Oktober 2019 07:40:57",
+	"HOSTNAME": "bananadev.local",
+	"LASTLOGINS": [ "Wed 30 Oct 22:55 from 192.168.11.52"],
+	"UPTIME": {
+		"DAYS": "5",
+		"HOURS": "1",
+		"MINUTES": "23 Minutes"
+	},
+	"LOADAVG": [ "0.77", "0.75", "0.61"],
+	"CPU_TEMPERATURE": [ " +45.8°C" ],
+	"STORAGE": { 
+		"STORAGE2": { "SUM": "59G", "USED": "15G", "FREE": "42G"},
+		"STORAGE3": { "SUM": "184G", "USED": "32G", "FREE": "143G"}
+	},
+	"RAM": {
+		"SUM": "970M",
+		"USED": "875M",
+		"FREE": "95M",
+		"SWAP": "17M"
+	},
+	"NETWORK": { "LAN": "192.168.11.20", "WLAN": "---" }
+}

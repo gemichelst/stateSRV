@@ -1,0 +1,33 @@
+#!/bin/bash
+# SIMPLE WEBSERVER FOR HOSTS TO READ/MERGE/DISPLAY SERVER.JSON
+
+# VARS
+CURDIR=$(dirname $0)
+declare -A CLIENTS
+
+# CLIENTS
+CLIENTS+=([stornas]="http://192.168.11.19:7236")
+CLIENTS+=([bananadev]="http://192.168.11.20:7236")
+CLIENTS+=([readynas]="http://192.168.11.22:7236")
+
+CLIENTSSUM=${#CLIENTS[@]}
+CLIENTSNUM=0
+echo "> found $CLIENTSSUM clients"
+
+for key in "${!CLIENTS[@]}";
+do
+	CLIENTNAME=$key
+	CLIENTURL=${CLIENTS[$key]}
+	CLIENTJSON="server.$CLIENTNAME.json"
+	echo "> GRABBING CLIENT$CLIENTSNUM $CLIENTNAME"
+	# echo "	CLIENT:	$CLIENTNAME"
+	echo "	URL:	$CLIENTURL"
+	echo "	JSON:	$CLIENTJSON"
+	CLIENTJSONDIR="$CURDIR/data/$CLIENTJSON"
+	DOWNLOAD=$(wget --quiet --no-check-certificate --show-progress --progress=bar:force $CLIENTURL)
+	MOVE=$(mv ./index.html $CLIENTJSONDIR)
+	CLIENTSNUM=$((CLIENTSNUM+1));
+done
+
+
+exit 0

@@ -1,0 +1,59 @@
+#!/bin/bash
+# $1=name
+if [ -z "$1" ]
+then
+	echo "> no device name given"
+	echo "usage: generate-device DEVICENAME"
+	exit 1
+else
+	NAME=$1
+	CURDIR=$(dirname $0)
+	STATUS1="status"
+	STATUS2="devices/status.$NAME"
+	SERVER_CLIENT1="server-client"
+	SERVER_CLIENT2="devices/server-client.$NAME"
+	SERVER_HOST1="server-host"
+	SERVER_HOST2="devices/server-host.$NAME"
+	JSON1="server.json"
+	JSON2="devices/server.$NAME.json"
+
+	if [ -f "$SERVER_CLIENT2" ]
+	then
+		echo "> $SERVER_CLIENT2 already exist - overwritting"
+		rm $SERVER_CLIENT2
+		cp $SERVER_CLIENT1 $SERVER_CLIENT2
+	else
+		echo "> $SERVER_CLIENT2 dont exist - generating"
+		cp $SERVER_CLIENT1 $SERVER_CLIENT2
+	fi
+	if [ -f "$SERVER_HOST2" ]
+	then
+		echo "> $SERVER_HOST2 already exist - overwritting"
+		rm $SERVER_HOST2
+		cp $SERVER_HOST1 $SERVER_HOST2
+	else
+		echo "> $SERVER_HOST2 dont exist - generating"
+		cp $SERVER_HOST1 $SERVER_HOST2
+	fi
+	if [ -f "$STATUS2" ]
+	then
+		echo "> $STATUS2 already exist - overwritting"
+		rm $STATUS2
+		cp $STATUS1 $STATUS2
+	else
+		echo "> $STATUS2 dont exist - generating"
+		cp $STATUS1 $STATUS2
+	fi
+
+	if [ -f "$JSON2" ]
+	then
+		echo "> $JSON2 already exist - overwritting"
+		rm $JSON2
+		cp $JSON1 $JSON2
+	else
+		echo "> $JSON2 dont exist - generating"
+		cp $JSON1 $JSON2
+	fi
+
+	exit 0
+fi
