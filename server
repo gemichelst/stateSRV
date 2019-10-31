@@ -1,0 +1,11 @@
+#!/bin/sh
+# SIMPLE WEBSERVER FOR CLIENTS TO PROVIDE DATA.JSON
+# $1 = PORT: DEFAULT: 8080
+# $2 = DOCROOT; DEFAULT: .
+PORT=7236
+CURDIR=$(dirname $0)
+CONTENT="$CURDIR/server-index.bash"
+
+(while true ; do nc -vl -p $PORT -c "$CONTENT"; done)
+
+

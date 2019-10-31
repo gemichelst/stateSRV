@@ -1,0 +1,45 @@
+#!/bin/bash
+# INSTALL TO $1
+SOURCEPATH=`pwd`
+APPNAME="stateSRV"
+PREFIXDIR="/usr/local/share"
+TARGETPATH1="$PREFIXDIR/$APPNAME"
+TARGETPATH2="$PREFIXDIR/$APPNAME/"
+
+echo "> INSTALLATION $APPNAME"
+echo "> INSTALL TO: $TARGETPATH1"
+
+# CHECK IF EXISTS AND INSTALL
+if [ -d "$TARGETPATH1" ]
+then
+	echo "> $TARGETPATH1 already exist - reinstalling"
+	rm -R $TARGETPATH1 
+else
+	echo "> $TARGETPATH1 - installing..."
+fi
+
+# MKDIR & COPY
+mkdir -p $TARGETPATH1
+cp -r ./* $TARGETPATH2
+
+# PATH
+PATH="$TARGETPATH1:$PATH"
+export PATH
+
+# PERMISSIONS
+chmod a+x "$TARGETPATH1/server"
+chmod a+x "$TARGETPATH1/status"
+chmod a+x "$TARGETPATH1/server-index.bash"
+chmod a+x "$TARGETPATH1/generate-json"
+chmod a+x "$TARGETPATH1/generate-device"
+chmod 755 "$TARGETPATH1/server-index.bash"
+chmod 755 "$TARGETPATH1/server.json"
+
+echo "> INSTALLATION COMPLETE"
+echo "--------------------------------------------------------"
+echo "> add the following 2 lines to your .profile or .bashrc"
+echo "PATH=\"$TARGETPATH1:\$PATH\""
+echo "export PATH"
+echo "--------------------------------------------------------"
+
+exit 0

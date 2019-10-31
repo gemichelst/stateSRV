@@ -1,0 +1,30 @@
+#!/bin/bash
+# $1=name
+NAME=$1
+CURDIR=$(dirname $0)
+STATUS1="$CURDIR/status"
+STATUS2="$CURDIR/devices/status.$NAME"
+SERVER1="$CURDIR/server"
+SERVER2="$CURDIR/devices/server.$NAME"
+
+if [ -f "$SERVER2" ]
+then
+	echo "> $SERVER2 already exist - overwritting"
+	rm $SERVER2
+	cp $SERVER1 $SERVER2
+else
+	echo "> $SERVER2 dont exist - generating"
+	cp $SERVER1 $SERVER2
+fi
+
+if [ -f "$STATUS2" ]
+then
+	echo "> $STATUS2 already exist - overwritting"
+	rm $STATUS2
+	cp $STATUS1 $STATUS2
+else
+	echo "> $STATUS2 dont exist - generating"
+	cp $STATUS1 $STATUS2
+fi
+
+exit 0

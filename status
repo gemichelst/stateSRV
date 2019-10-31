@@ -1,0 +1,88 @@
+#!/bin/sh
+#
+
+# VARS
+CURDIR=$(dirname $0)
+
+# DATE & TIME
+DATE_TIME=`date +"%A, %e %B %Y %H:%M:%S"`
+
+# OS + HOSTNAME
+OS1=`grep PRETTY /etc/os-release | cut -c 13-`
+HOSTNAME=`hostname -f`
+
+# LAST LOGINS
+LAST1=`last -2 -a | awk 'NR==2{print $3}'`    # weekday
+LAST2=`last -2 -a | awk 'NR==2{print $5}'`    # day
+LAST3=`last -2 -a | awk 'NR==2{print $4}'`    # month
+LAST4=`last -2 -a | awk 'NR==2{print $6}'`    # time
+LAST5=`last -2 -a | awk 'NR==2{print $10}'`   # remote
+
+# UPTIME
+UP0=`cut -d. -f1 /proc/uptime`
+UP1=$(($UP0/86400))        		# days
+UP2=$(($UP0/3600%24))        	# hours
+UP3=$(($UP0/60%60))        		# minutes
+UP4=$(($UP0%60))        		# seconds
+
+# LOADAVERAGE
+LOAD1=`cat /proc/loadavg | awk '{print $1}'`    # Letzte Minute
+LOAD2=`cat /proc/loadavg | awk '{print $2}'`    # Letzte 5 Minuten
+LOAD3=`cat /proc/loadavg | awk '{print $3}'`    # Letzte 15 Minuten
+
+# TEMPERATURE
+#TEMP0=`cut -d. -f1 /sys/devices/platform/sunxi-i2c.0/i2c-0/0-0034/temp1_input`
+#TEMP=$(($TEMP0/1000)) #Temperatur Dezimal
+#sTEMP=`sensors | grep temp | cut -c15-24`
+
+# STORAGE / HDD
+STORAGE1_sum=`df -h | grep 'dev/sdc1' | awk '{print $2}'`    # Gesamtspeicher
+STORAGE1_used=`df -h | grep 'dev/sdc1' | awk '{print $3}'`   # Belegt
+STORAGE1_free=`df -h | grep 'dev/sdc1' | awk '{print $4}'`   # Frei
+STORAGE2_sum=`df -h | grep 'dev/sda1' | awk '{print $2}'`    # Gesamtspeicher
+STORAGE2_used=`df -h | grep 'dev/sda1' | awk '{print $3}'`   # Belegt
+STORAGE2_free=`df -h | grep 'dev/sda1' | awk '{print $4}'`   # Frei
+STORAGE3_sum=`df -h | grep 'dev/sdb1' | awk '{print $2}'`    # Gesamtspeicher
+STORAGE3_used=`df -h | grep 'dev/sdb1' | awk '{print $3}'`   # Belegt
+STORAGE3_free=`df -h | grep 'dev/sdb1' | awk '{print $4}'`   # Frei
+
+# RAM / MEMORY
+RAM1=`free -h | grep 'Mem' | awk '{print $2}'`    # Total
+RAM2=`free -h | grep 'Mem' | awk '{print $3}'`    # Used
+RAM3=`free -h | grep 'Mem' | awk '{print $4}'`    # Free
+RAM4=`free -h | grep 'Swap' | awk '{print $3}'`   # Swap used
+
+# NETWORK / IPs
+IP_LAN=$(ip addr | grep 'state UP' -A2 | tail -n1 | awk '{print $2}' | cut -f1  -d'/')
+if ( ifconfig | grep -q "wlan0" ) ; then IP_WLAN=`ifconfig wlan0 | grep "inet" | cut -d ":" -f 2 | cut -d " " -f 1` ; else IP_WLAN="---" ; fi ;
+WANIP4=$(dig +short myip.opendns.com @resolver1.opendns.com)
+
+# OUTPUT AS JSON
+NEWLINE="\n\t"
+NEWLINETAB="\n\t\t"
+TAB="\t"
+
+echo "{"
+echo "$TAB\"GENERATED_AT\": \"$DATE_TIME\","
+echo "$TAB\"HOSTNAME\": \"$HOST_NAME\","
+echo "$TAB\"LASTLOGINS\": [ \"$LAST1 $LAST2 $LAST3 $LAST4 from $LAST5\"],"
+echo "$TAB\"UPTIME\": {"
+echo "$TAB$TAB\"DAYS\": \"$UP1\","
+echo "$TAB$TAB\"HOURS\": \"$UP2\","
+echo "$TAB$TAB\"MINUTES\": \"$UP3 Minutes\""
+echo "$TAB},"
+echo "$TAB\"LOADAVG\": [ \"$LOAD1\", \"$LOAD2\", \"$LOAD3\"],"
+echo "$TAB\"CPU_TEMPERATURE\": [ \"$TEMP\" ],"
+echo "$TAB\"STORAGE\": { "
+echo "$TAB$TAB\"STORAGE1\": { \"SUM\": \"$STORAGE1_sum\", \"USED\": \"$STORAGE1_used\", \"FREE\": \"$STORAGE1_free\"},"
+echo "$TAB$TAB\"STORAGE2\": { \"SUM\": \"$STORAGE2_sum\", \"USED\": \"$STORAGE2_used\", \"FREE\": \"$STORAGE2_free\"},"
+echo "$TAB$TAB\"STORAGE3\": { \"SUM\": \"$STORAGE3_sum\", \"USED\": \"$STORAGE3_used\", \"FREE\": \"$STORAGE3_free\"}"
+echo "$TAB},"
+echo "$TAB\"RAM\": {"
+echo "$TAB$TAB\"SUM\": \"$RAM1\","
+echo "$TAB$TAB\"USED\": \"$RAM2\","
+echo "$TAB$TAB\"FREE\": \"$RAM3\","
+echo "$TAB$TAB\"SWAP\": \"$RAM4\""
+echo "$TAB},"
+echo "$TAB\"NETWORK\": { \"LAN\": \"$IP_LAN\", \"WLAN\": \"$IP_WLAN\" }"
+echo "}"
