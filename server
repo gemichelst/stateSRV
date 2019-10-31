@@ -10,6 +10,7 @@ then
 	$2="nc"
 else
 	PORT=$1
+	echo "> using PORT $PORT"
 fi
 
 if [ -z "$2" ]
@@ -17,11 +18,10 @@ then
 	NCCMD="nc"
 else
 	NCCMD="$2"
+	echo "> using NCCMD $NCCMD"
 fi
-
-PORT=7236
-NCCMD="nc"				
+			
 CURDIR=$(dirname $0)
 CONTENT="$CURDIR/server-index.bash"
 
-(while true ; do nc -vl -p $PORT -c "$CONTENT"; done)
+(while true ; do $NCCMD -vl -p $PORT -c "$CONTENT"; done)
