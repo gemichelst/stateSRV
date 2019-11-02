@@ -281,7 +281,7 @@ section header h2 {
 }
 #section1 .header .header-columns .header-column-menu a {
   color: rgba(255,255,255,0.75);
-  font-weight: 100;
+  font-weight: 300;
   text-decoration: none;
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
@@ -300,13 +300,33 @@ section header h2 {
   text-align: left;
 }
 #section1 .content {
+  margin-top: 1rem;
+  margin-left: 4.5rem;
+  margin-bottom: 1rem;
+  color: #fff;
   font-size: 16px;
   height: 90vh;
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
   -webkit-transition: all 0.75s ease-in-out 0.25s;
   transition: all 0.75s ease-in-out 0.25s;
+}
+#section1 .content .clients-list {
+  color: #fff;
+}
+#section1 .content .clients-list .clients-list_client {
+  float: left;
+  padding: 0.5rem;
+}
+#section1 .content .clients-list .clients-list_client a {
+  color: rgba(255,255,255,0.75);
+  font-weight: 500;
+  text-decoration: none;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+#section1 .content .clients-list .clients-list_client a:hover {
+  color: #fff;
+  border-bottom: 1px solid #fff;
 }
 #section1 .footer {
   z-index: 100;

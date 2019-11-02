@@ -52,4 +52,35 @@ function readClient($clientFile)
 	# RETURNN CLIENTS
 	return $clients;
 }
+function listClientsAsList()
+{
+
+	# READ FILES
+	$data			= "../data/";
+	$clientFiles	= scandir($data);
+	$clientsList 	= "";
+	array_splice($clientFiles, 0, 1);
+	array_splice($clientFiles, 0, 1);
+	
+	# OUTPUT FILES
+	// echo "<!-- \n";
+	// print_r($clientFiles);
+	// echo "\n -->\n";
+
+	# COUNT
+	$clientsNum 	= count($clientFiles);
+
+	# GENERATE LIST
+	for($i=0;$i<$clientsNum;$i++){
+		$clientRaw1 = explode("server.",$clientFiles[$i]);
+		$clientRaw2 = explode(".json",$clientRaw1[1]);
+		$clientsList .= '<div class="clients-list_client"><a href="#client-'.$i.'">'.$clientRaw2[0].'</a></div>';
+	}
+
+	// $clientsList 	= '<div class="clients-list">'.$clientsList.'</div>';
+
+	# RETURN FILES ARRAY
+	return $clientsList;
+
+}
 ?>

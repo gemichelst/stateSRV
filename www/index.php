@@ -52,7 +52,11 @@ readClient('server.bananadev.json');
         </div>
       </div>
       <div class="content">
-        
+        <div class="clients-list">
+          <div class="clients-list_client">
+            <a href="#dashboard">dashboard</a>
+          </div>
+          <?php $clientsList = listClientsAsList(); echo $clientsList; ?>
       </div>
       <div class="footer"></div>
     </section>
