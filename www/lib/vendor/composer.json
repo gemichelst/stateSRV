@@ -1,0 +1,7 @@
+{
+    "require": {
+		"j7mbo/twitter-api-php": "dev-master",
+        "facebook/graph-sdk": "^5.6",
+        "xmhafiz/fb-page-feed": "^1.1"
+    }
+}

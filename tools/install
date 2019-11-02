@@ -1,0 +1,55 @@
+#!/bin/bash
+# INSTALL TO $1
+SOURCEPATH=`pwd`
+APPNAME="stateSRV"
+PREFIXDIR="/usr/local/share"
+TARGETPATH1="$PREFIXDIR/$APPNAME"
+TARGETPATH2="$PREFIXDIR/$APPNAME/"
+
+echo "> INSTALLATION $APPNAME"
+echo "> INSTALL TO: $TARGETPATH1"
+
+# CHECK IF EXISTS AND INSTALL
+if [ -d "$TARGETPATH1" ]
+then
+	echo "> $TARGETPATH1 already exist - reinstalling"
+	rm -R $TARGETPATH1 
+else
+	echo "> $TARGETPATH1 - installing..."
+fi
+
+# MKDIR & COPY
+mkdir -p $TARGETPATH1
+cp -r ./* $TARGETPATH2
+
+# PATH
+PATH="$TARGETPATH1:$PATH"
+export PATH
+
+# CRONTAB
+touch /etc/cron.d/stateSRV
+echo "@reboot $TARGETPATH1/server-client" >> /etc/cron.d/stateSRV
+
+# APACHE HOST UI
+cp "$TARGETPATH1/conf/statesrv-apache2.conf" /etc/apache2/sites-available/
+a2ensite statesrv-apache2.conf
+
+# PERMISSIONS
+chmod a+x "$TARGETPATH1/server-host"
+chmod a+x "$TARGETPATH1/server-client"
+chmod a+x "$TARGETPATH1/status"
+chmod a+x "$TARGETPATH1/server-index.bash"
+chmod a+x "$TARGETPATH1/tools/generate-json"
+chmod a+x "$TARGETPATH1/tools/generate-device"
+chmod a+x "$TARGETPATH1/tools/fix-permission"
+chmod 755 "$TARGETPATH1/server-index.bash"
+chmod 755 "$TARGETPATH1/server.json"
+
+echo "> INSTALLATION COMPLETE"
+echo "--------------------------------------------------------"
+echo "> add the following 2 lines to your .profile or .bashrc"
+echo "PATH=\"$TARGETPATH1:\$PATH\""
+echo "export PATH"
+echo "--------------------------------------------------------"
+
+exit 0

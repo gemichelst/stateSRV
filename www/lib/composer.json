@@ -1,0 +1,5 @@
+{
+    "require": {
+        "zendframework/zend-debug": "^2.6"
+    }
+}

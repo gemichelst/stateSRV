@@ -1,0 +1,28 @@
+{
+    "name": "xmhafiz/fb-page-feed",
+    "description": "Simple wrapper class to get any Facebook Page posts",
+    "keywords": ["php", "facebook"],
+    "license": "MIT",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Mohd Hafiz",
+            "email": "xmhafiz@gmail.com",
+            "homepage": "https://github.com/xmhafiz"
+        }
+    ],
+    "require": {
+       "php": ">=5.5",
+       "guzzlehttp/guzzle": "~6.0"
+    },
+    "require-dev": {
+        "vlucas/phpdotenv": "~2.2",
+        "phpunit/phpunit": "~5.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Xmhafiz\\FbFeed\\": "src/"
+        },
+        "files": ["helper/helpers.php"]
+    }
+}
