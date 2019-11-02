@@ -18,16 +18,16 @@ require_once('src/inc/functions.inc.php');
 
 $clients            = listClients();
 $clientsNum         = count($clients);
+$copy               = copyListClients();
 
 readClient('server.bananadev.json');
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <title>STATE-SERVER v<?php echo VERSION; ?></title>
-    <link rel="shortcut icon" href="./assets/images/favicon/favicon.png" type="image/png">
-    <link rel="icon" href="./assets/images/favicon/favicon.png" type="image/png">
+    <!-- <link rel="shortcut icon" href="./assets/images/favicon/favicon.png" type="image/png">
+    <link rel="icon" href="./assets/images/favicon/favicon.png" type="image/png"> -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex, nofollow">
@@ -54,10 +54,13 @@ readClient('server.bananadev.json');
       <div class="content">
         <div class="clients-list">
           <div class="clients-list_client">
-            <a class="client-list_link" href="#dashboard">dashboard</a>
+            <a class="client-list_link" href="#dashboard" data-client="dashboard">dashboard</a>
           </div>
           <?php $clientsList = listClientsAsList(); echo $clientsList; ?>
+        </div>
+        <div id="client-list_data" class="client-list_data"></div>
       </div>
+
       <div class="footer"></div>
     </section>
   </body>

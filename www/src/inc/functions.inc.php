@@ -32,6 +32,24 @@ function listClients()
 	return $clientFiles;
 
 }
+function copyListClients()
+{
+
+	# READ FILES
+	$data			= "../data/";
+	$clientFiles	= scandir($data);
+	array_splice($clientFiles, 0, 1);
+	array_splice($clientFiles, 0, 1);
+	$clientsNum 	= count($clientFiles);
+
+	# COPY
+	for($i=0;$i<$clientsNum;$i++){
+		// $targetRaw	= explode("../data/",$clientFiles[$i]);
+		$target		= "tmp/".$clientFiles[$i];
+		$copy 		= copy("../data/$clientFiles[$i]",$target);
+	}
+
+}
 function readClient($clientFile)
 {
 	$clientFile = '../data/'.$clientFile;
@@ -74,7 +92,7 @@ function listClientsAsList()
 	for($i=0;$i<$clientsNum;$i++){
 		$clientRaw1 = explode("server.",$clientFiles[$i]);
 		$clientRaw2 = explode(".json",$clientRaw1[1]);
-		$clientsList .= '<div class="clients-list_client"><a class="client-list_link" href="#client-'.$i.'">'.$clientRaw2[0].'</a></div>';
+		$clientsList .= '<div class="clients-list_client"><a class="client-list_link" href="#client-'.$i.'" data-client="client" data-client-file="'.$clientFiles[$i].'">'.$clientRaw2[0].'</a></div>';
 	}
 
 	// $clientsList 	= '<div class="clients-list">'.$clientsList.'</div>';
