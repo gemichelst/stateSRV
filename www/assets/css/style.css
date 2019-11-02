@@ -328,6 +328,18 @@ section header h2 {
   color: #fff;
   border-bottom: 1px solid #fff;
 }
+#section1 .content .clients-list .clients-list_client:nth-of-type(1) a {
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 1px solid #fff;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+#section1 .content .clients-list .clients-list_client:nth-of-type(1) a:hover {
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
 #section1 .footer {
   z-index: 100;
   width: 100%;

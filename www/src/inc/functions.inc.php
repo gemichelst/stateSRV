@@ -74,7 +74,7 @@ function listClientsAsList()
 	for($i=0;$i<$clientsNum;$i++){
 		$clientRaw1 = explode("server.",$clientFiles[$i]);
 		$clientRaw2 = explode(".json",$clientRaw1[1]);
-		$clientsList .= '<div class="clients-list_client"><a href="#client-'.$i.'">'.$clientRaw2[0].'</a></div>';
+		$clientsList .= '<div class="clients-list_client"><a class="client-list_link" href="#client-'.$i.'">'.$clientRaw2[0].'</a></div>';
 	}
 
 	// $clientsList 	= '<div class="clients-list">'.$clientsList.'</div>';
