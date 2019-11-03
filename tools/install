@@ -48,8 +48,7 @@ fi
 echo "> CREATING DIR: $TARGETPATH1"
 mkdir -p $TARGETPATH1
 echo "> COPYING FILES TO: $TARGETPATH2"
-SOURCEPATH="$SOURCEPATH/*"
-cp -r "$SOURCEPATH/*" $TARGETPATH2
+cp -r "$SOURCEPATH/" $TARGETPATH2
 
 # PERMISSIONS
 echo "> SET PERMISSIONS TO ROOT-EXECUTABLES: $TARGETPATH1 "
@@ -88,6 +87,7 @@ then
 	addToUsrLocalBin server-client
 	addToUsrLocalBin server-host
 else
+	echo "> ADDING EXECUTABLES TO: /usr/local/bin => skipped"
 fi
 
 # PATH
