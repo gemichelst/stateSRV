@@ -1,40 +1,58 @@
 #!/bin/bash
 # INSTALL TO $1
+echo "#========================"
+echo "# stateSRV Installation #"
+echo "# v03112019             #"
+echo "# ======================#"
+echo " "
+echo " "
+
 SOURCEPATH=`pwd`
 APPNAME="stateSRV"
-PREFIXDIR="/usr/local/share"
-TARGETPATH1="$PREFIXDIR/$APPNAME"
-TARGETPATH2="$PREFIXDIR/$APPNAME/"
+PREFIXDIR_default="~/usr/local/etc"
+TARGETPATH1_default="$PREFIXDIR_default/$APPNAME"
+TARGETPATH2_default="$PREFIXDIR_default/$APPNAME/"
 
-echo "> INSTALLATION $APPNAME"
-echo "> INSTALL TO: $TARGETPATH1"
+# FOLDER
+read -p "> INSTALL TO ($PREFIXDIR_default): " PREFIXDIR
+if [ -z "$PREFIXDIR" ]
+then
+	PREFIXDIR=$PREFIXDIR_default
+	TARGETPATH1="$PREFIXDIR/$APPNAME"
+	TARGETPATH2="$PREFIXDIR/$APPNAME/"
+else
+	TARGETPATH1="$PREFIXDIR/$APPNAME"
+	TARGETPATH2="$PREFIXDIR/$APPNAME/"
+fi
 
 # CHECK IF EXISTS AND INSTALL
 if [ -d "$TARGETPATH1" ]
 then
-	echo "> $TARGETPATH1 already exist - reinstalling"
-	rm -R $TARGETPATH1 
+	echo "> FOLDER EXISTS AT: $TARGETPATH1"
+	read -p "> REINSTALL stateSRV ?   (y/N): " REINSTALL_STATESRV
+	if [ $REINSTALL_STATESRV == "y" ]
+	then
+		echo "> REMOVING stateSRV FROM: $TARGETPATH1"
+		rm -R $TARGETPATH1
+	else
+		echo "> ABORTING INSTALLATION"
+		exit 1
+	fi
 else
-	echo "> $TARGETPATH1 - installing..."
+	echo "> INSTALL TO: $TARGETPATH1"
+	echo "=============================================================="
+	echo "\n"
 fi
 
 # MKDIR & COPY
+echo "> CREATING DIR: $TARGETPATH1"
 mkdir -p $TARGETPATH1
-cp -r ./* $TARGETPATH2
-
-# PATH
-PATH="$TARGETPATH1:$PATH"
-export PATH
-
-# CRONTAB
-touch /etc/cron.d/stateSRV
-echo "@reboot $TARGETPATH1/server-client" >> /etc/cron.d/stateSRV
-
-# APACHE HOST UI
-cp "$TARGETPATH1/conf/statesrv-apache2.conf" /etc/apache2/sites-available/
-a2ensite statesrv-apache2.conf
+echo "> COPYING FILES TO: $TARGETPATH2"
+SOURCEPATH="$SOURCEPATH/*"
+cp -r "$SOURCEPATH/*" $TARGETPATH2
 
 # PERMISSIONS
+echo "> SET PERMISSIONS TO ROOT-EXECUTABLES: $TARGETPATH1 "
 chmod a+x "$TARGETPATH1/server-host"
 chmod a+x "$TARGETPATH1/server-client"
 chmod a+x "$TARGETPATH1/status"
@@ -45,11 +63,151 @@ chmod a+x "$TARGETPATH1/tools/fix-permission"
 chmod 755 "$TARGETPATH1/server-index.bash"
 chmod 755 "$TARGETPATH1/server.json"
 
+addToUsrLocalBin() {
+if [ -z "$1" ]
+then
+	echo "> ADD EXECUTABLES TO: /usr/local/bin ==> skipped"
+else
+	echo "> INSTALLING: /usr/local/bin/$1"
+	touch "/usr/local/bin/$1"
+	echo "#!/bin/bash" >> "/usr/local/bin/$1"
+	echo "#" >> "/usr/local/bin/$1"
+	echo "$TARGETPATH1/$1" >> "/usr/local/bin/$1"
+	chmod a+x "/usr/local/bin/$1"
+	echo " "
+	echo "> CREATED EXECUTABLE: /usr/local/bin/$1"
+	echo " "
+fi
+}
+
+# EXECUTABLES
+read -p > "> ADD EXECUTABLES TO /usr/local/bin ?   (y/N): " ADDTOUSRLOCALBIN
+if [ $ADDTOUSRLOCALBIN == "y"]
+then
+	echo "> ADDING EXECUTABLES TO: /usr/local/bin"
+	addToUsrLocalBin server-client
+	addToUsrLocalBin server-host
+else
+fi
+
+# PATH
+read -p > "ADD PATH TO ~/.(bash_)profile ?   (y/N): " ADDTOPROFILE
+if [ $ADDTOPROFILE == "y" ]
+then
+	echo "> PERMANENT ADDING PATH TO PROFILE"
+	export PATH="$TARGETPATH1:$PATH"
+	if [ -f "~/.bash_profile" ]
+	then
+		echo "> ADDING VARS TO: ~/.bash_profile"
+		echo 'export PATH="$TARGETPATH1:$PATH"' >> ~/.bash_profile
+		ADDEDTOPROFILEFILE="~/.bash_profile"
+	else
+		echo "> ADDING VARS TO: ~/.profile"
+		echo 'export PATH="$TARGETPATH1:$PATH"' >> ~/.profile
+		ADDEDTOPROFILEFILE="~/.profile"
+	fi
+else
+	echo "> TEMPORARY ADDING PATH TO SESSION"
+	export PATH="$TARGETPATH1:$PATH"
+fi
+
+# CRONTAB
+CRONTABFILE_default="/etc/cron.d/stateSRV"
+read -p > "> CREATING CRONTAB:   (y/N): " CRONTAB_ENABLE
+if [ $CRONTAB_ENABLE == "y" ]
+then
+	read -p > "> CRONTAB FILE:   ($CRONTABFILE_default): " CRONTABFILE
+	if [ -z "CRONTABFILE"]
+	then
+		CRONTABFILE=$CRONTABFILE_default 
+		echo "> CREATING CRONTAB FILE AT: $CRONTABFILE"
+		touch $CRONTABFILE
+		echo "@reboot $TARGETPATH1/server-client" >> $CRONTABFILE
+	else
+		echo "> CREATING CRONTAB FILE AT: $CRONTABFILE"
+		touch $CRONTABFILE
+		echo "@reboot $TARGETPATH1/server-client" >> $CRONTABFILE
+	fi
+else
+	echo "> CREATING CRONTAB: skipped"
+fi
+
+# APACHE HOST UI
+read -p > 'CREATE APACHE2 CONF AT: /etc/apache2/sites-available ?   (y/N): ' APACHE2CONF
+if [ $APACHE2CONF == "y"]
+then
+	if [ -d "/etc/apache2/sites-available" ]
+	then
+		echo "> CREATING APACHE2 CONF AT: /etc/apache2/sites-available/"
+		cp "$TARGETPATH1/conf/statesrv-apache2.conf" /etc/apache2/sites-available/
+		read -p > 'ENABLE SITE WITH a2ensite ?   (y/N): ' A2ENSITE_ENABLE
+		if [ $A2ENSITE_ENABLE == "y"]
+		then
+			echo "> RUNNING: a2ensite statesrv-apache2.conf"
+			a2ensite statesrv-apache2.conf
+		else
+			echo "> ENABLE SITE WITH: a2ensite => skipped"
+		fi
+	else
+		echo "> ENABLE SITE WITH: a2ensite ==> error"
+		echo "> COULDNT FOUND APACHE2 AT: /etc/apache2/sites-available ==> skipped"
+	fi
+else
+	echo "> CREATING APACHE2 CONF AT: /etc/apache2/sites-available/ ==> skipped"
+fi
+
+
+
 echo "> INSTALLATION COMPLETE"
 echo "--------------------------------------------------------"
-echo "> add the following 2 lines to your .profile or .bashrc"
-echo "PATH=\"$TARGETPATH1:\$PATH\""
-echo "export PATH"
+
+# ADDED TO USR/LOCAL/BIN
+
+
+# CRONTAB
+if [ $CRONTAB_ENABLE == "y" ]
+then
+	echo "> CRONTAB INSTALLED TO: $CRONTABFILE"
+else
+	echo "> CRONTAB DISABLED"
+fi
+if
+
+# APACHE2
+if [ $APACHE2CONF == "y" ]
+then
+	echo "> CREATED APACHE2 CONF AT: /etc/apache2/sites-available/statesrv-apache2.conf"
+	if [ $A2ENSITE_ENABLE == "y" ]
+	then
+		echo "> APACHE SITE ENABLED"
+	else
+		echo "> APACHE SITE DISABLED"
+	fi
+else
+	echo "> APACHE2 CONF DISABLED"
+fi
+
+# ADDED TO .PROFILE
+if [ $ADDTOPROFILE == "y" ]
+then
+	echo "> stateSRV PATH WAS PERMANENT ADDED TO PROFILE: $ADDEDTOPROFILEFILE"
+	echo "> usage for client:\n\t\tstateSRV-client [path/to/server-client.conf]"
+	echo "> [path/to/server-client.conf] == optional"
+	echo "> usage for server:\n\t\tstateSRV-server [path/to/server-host.conf]"
+	echo "> [path/to/server-host.conf] == optional"
+else
+	echo "> for more simpler use of stateSRV ==>"
+	echo "> add the following line to your .profile / .bashrc / .bash-profile"
+	echo 'export PATH=\"\$TARGETPATH1:\$PATH\"'
+	echo " "
+	echo "> stateSRV PATH WAS TEMPORARY ADDED TO SESSION"
+	echo "> usage for client:\n\t\t$TARGETPATH1/stateSRV-client [path/to/server-client.conf]"
+	echo "> [path/to/server-client.conf] == optional"
+	echo "> usage for server:\n\t\t$TARGETPATH1/stateSRV-server [path/to/server-host.conf]"
+	echo "> [path/to/server-host.conf] == optional"
+fi
 echo "--------------------------------------------------------"
+echo "--------------------------------------------------------"
+echo "\n\n"
 
 exit 0

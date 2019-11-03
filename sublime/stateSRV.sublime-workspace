@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"net",
+				"networkWLAN"
+			],
+			[
+				"ram",
+				"ramSwap"
+			],
+			[
+				"sto",
+				"storage2"
+			],
+			[
+				"clients",
+				"clientsList"
+			],
+			[
 				"JSO",
 				"JSONLENGTH"
 			],
@@ -498,22 +514,6 @@
 			[
 				"al",
 				"align-items"
-			],
-			[
-				"stroke",
-				"stroke-linejoin\tproperty"
-			],
-			[
-				"ease-in",
-				"ease-in-out"
-			],
-			[
-				"anim",
-				"animation-name"
-			],
-			[
-				"scr",
-				"script\t<script>"
 			]
 		]
 	},
@@ -578,17 +578,48 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/m.matzat/Desktop/stateSRV"
+		"/Users/m.matzat/Desktop/stateSRV",
+		"/Users/m.matzat/Desktop/stateSRV/tools"
 	],
 	"file_history":
 	[
+		"/Users/m.matzat/HTDOCS/bmw-stalker/src/assets/js/animation-section.js",
+		"/Users/m.matzat/Desktop/stateSRV/www/src/stylus/_sections/_home.styl",
+		"/Users/m.matzat/Desktop/stateSRV/www/index.php",
+		"/Users/m.matzat/Desktop/stateSRV/www/src/inc/functions.inc.php",
+		"/Users/m.matzat/Desktop/stateSRV/www/assets/js/script-default.js",
+		"/Users/m.matzat/Desktop/stateSRV/server-client",
+		"/Users/m.matzat/Desktop/stateSRV/tools/server-index.bash",
+		"/Users/m.matzat/Desktop/stateSRV/server.json",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/src/php/inc/functions.inc.php",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/src/assets/js/animation-intro.js",
+		"/Users/m.matzat/Desktop/stateSRV/data/server.bananadev.json",
+		"/Users/m.matzat/Desktop/stateSRV/data/server.stornas.json",
+		"/Users/m.matzat/Desktop/stateSRV/data/server.readynas.json",
+		"/Users/m.matzat/Desktop/stateSRV/www/src/inc/definitions-vars.inc.php",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/src/php/feedbot-RCS.php",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/src/php/inc/definition.vars.inc.php",
+		"/Users/m.matzat/Desktop/stateSRV/www/src/vars.inc.php",
+		"/Users/m.matzat/Desktop/stateSRV/www/src/functions.inc.php",
+		"/Users/m.matzat/Desktop/stateSRV/www/src/stylus/_base/_settings.styl",
+		"/Users/m.matzat/Desktop/stateSRV/www/Makefile",
+		"/Users/m.matzat/Desktop/stateSRV/www/src/stylus/_base/_layout.styl",
+		"/Users/m.matzat/Desktop/stateSRV/www/src/stylus/_base/_material.styl",
+		"/Users/m.matzat/Desktop/stateSRV/www/libs/material/roboto/Roboto.css",
+		"/Users/m.matzat/Desktop/stateSRV/VERSION",
+		"/Users/m.matzat/Desktop/stateSRV/conf/server-host.conf",
+		"/Users/m.matzat/Desktop/stateSRV/conf/server-client.conf",
+		"/Users/m.matzat/Desktop/stateSRV/server-host",
+		"/Users/m.matzat/Desktop/stateSRV/tools/install",
+		"/Users/m.matzat/Desktop/stateSRV/tools/fix-permissions",
+		"/Users/m.matzat/Desktop/stateSRV/tools/generate-json",
+		"/Users/m.matzat/Desktop/stateSRV/tools/generate-device",
+		"/Users/m.matzat/Desktop/stateSRV/generate-device",
 		"/Users/m.matzat/Desktop/stateSRV/README.md",
 		"/Users/m.matzat/Library/Application Support/Sublime Text 3/Packages/MarkdownEditing/MultiMarkdown.sublime-settings",
-		"/Users/m.matzat/Desktop/stateSRV/generate-device",
 		"/Users/m.matzat/Desktop/stateSRV/server",
 		"/Users/m.matzat/Desktop/stateSRV/install",
 		"/Users/m.matzat/Desktop/stateSRV/status",
-		"/Users/m.matzat/Desktop/stateSRV/server.json",
 		"/Users/m.matzat/Desktop/stateSRV/server-index.bash",
 		"/Users/m.matzat/Desktop/stateSRV/server.cfg.stornas",
 		"/Users/m.matzat/Desktop/stateSRV/generate-json",
@@ -596,8 +627,6 @@
 		"/Volumes/storage1/SCRIPTS/STORNAS/status-stornas",
 		"/Users/m.matzat/Desktop/status_bananadev",
 		"/Users/m.matzat/HTDOCS/bmw-stalker/src/pug/section-aesthetic.pug",
-		"/Users/m.matzat/HTDOCS/bmw-stalker/src/php/inc/functions.inc.php",
-		"/Users/m.matzat/HTDOCS/bmw-stalker/src/assets/js/animation-section.js",
 		"/Users/m.matzat/HTDOCS/bmw-stalker/src/assets/js/dev.js",
 		"/Users/m.matzat/HTDOCS/bmw-stalker/dist/play-video.php",
 		"/Users/m.matzat/HTDOCS/bmw-stalker/src/stylus/_base/_material.styl",
@@ -634,7 +663,6 @@
 		"/Users/m.matzat/HTDOCS/dared-studio-2.0/assets/css/font-gotham.css",
 		"/Users/m.matzat/HTDOCS/dared-studio-2.0/lib/libs/material/roboto/Roboto.css",
 		"/Users/m.matzat/HTDOCS/dared-studio-2.0/README.md",
-		"/Users/m.matzat/HTDOCS/bmw-stalker/src/assets/js/animation-intro.js",
 		"/Users/m.matzat/HTDOCS/bmw-stalker/src/pug/index-static.pug",
 		"/Users/m.matzat/HTDOCS/td-socialfeed/jsonfeed_multiple_bmw.php",
 		"/Users/m.matzat/HTDOCS/td-socialfeed/jsonfeed.php",
@@ -648,7 +676,6 @@
 		"/Users/m.matzat/HTDOCS/bmw-stalker/database.static.json",
 		"/Users/m.matzat/HTDOCS/bmw-stalker/src/pug/section-thrill.pug",
 		"/Users/m.matzat/HTDOCS/bmw-stalker/src/stylus/_base/_settings.styl",
-		"/Users/m.matzat/HTDOCS/bmw-stalker/src/php/feedbot-RCS.php",
 		"/Users/m.matzat/HTDOCS/bmw-stalker/dist/assets/images/icons-new/post-likes.svg",
 		"/Users/m.matzat/HTDOCS/bmw-stalker/src/pug/section-independent.pug",
 		"/Users/m.matzat/HTDOCS/bmw-stalker/src/pug/section-pioneering.pug",
@@ -675,7 +702,6 @@
 		"/Users/m.matzat/HTDOCS/bmw-stalker/example-project.settings.php",
 		"/Users/m.matzat/HTDOCS/bmw-stalker/src/php/inc/mysql_connect.inc.php",
 		"/Users/m.matzat/HTDOCS/bmw-stalker/src/php/test.php",
-		"/Users/m.matzat/HTDOCS/bmw-stalker/src/php/inc/definition.vars.inc.php",
 		"/Users/m.matzat/HTDOCS/bmw-stalker/Makefile",
 		"/Users/m.matzat/HTDOCS/bmw-stalker/src/stylus/_base/_base.styl",
 		"/Users/m.matzat/HTDOCS/bmw-stalker/src/php/inc/default.vars.inc.php",
@@ -684,36 +710,11 @@
 		"/Users/m.matzat/HTDOCS/bmw-stalker/dist/index-static.html",
 		"/Users/m.matzat/HTDOCS/LIKETHISLIKETHAT/assets/js/ltlt-default.js",
 		"/Users/m.matzat/HTDOCS/bmw-stalker/bmw-stalker.log",
-		"/Users/m.matzat/HTDOCS/bmw-stalker/lib/webpack.config.lite.js",
-		"/Users/m.matzat/HTDOCS/bmw-stalker/src/php/defines.php",
-		"/Users/m.matzat/HTDOCS/td-socialfeed/view/BMW/social_pulse_bmw_new_bak.html",
-		"/Users/m.matzat/HTDOCS/bmw-stalker/src/php/bla.json",
-		"/Users/m.matzat/HTDOCS/td-socialfeed/view/BMW/js/social_script_multiple.js",
-		"/Users/m.matzat/HTDOCS/td-socialfeed/view/BMW/js/social_script_multiple_dev.js",
-		"/Users/m.matzat/HTDOCS/td-socialfeed/jsonfeed_multiple_mini_dev.php",
-		"/Users/m.matzat/HTDOCS/td-socialfeed/jsonfeed_multiple_bmw_v2.php",
-		"/Users/m.matzat/HTDOCS/bmw-stalker/project.settings.json",
-		"/Users/m.matzat/HTDOCS/bmw-stalker/sections.data.json",
-		"/Users/m.matzat/HTDOCS/bmw-stalker/src/php/sections.data.json",
-		"/Users/m.matzat/HTDOCS/bmw-stalker/example.project.settings.json",
-		"/Users/m.matzat/HTDOCS/bmw-stalker/src/assets/js/vars.js",
-		"/Users/m.matzat/HTDOCS/bmw-stalker/src/stylus/_modules/_snackbar.styl",
-		"/Users/m.matzat/Library/Application Support/Sublime Text 3/Packages/User/Stylus.sublime-settings",
-		"/Users/m.matzat/HTDOCS/default_project_template/project.sublime-project",
-		"/Users/m.matzat/HTDOCS/bmw-stalker/bmw-stalker.sublime-project",
-		"/Users/m.matzat/HTDOCS/bmw-stalker/lib/webpack.config.js",
-		"/Users/m.matzat/Library/Application Support/Sublime Text 3/Packages/Stylus/Stylus.sublime-settings",
-		"/Users/m.matzat/HTDOCS/default_project_template/secure/sftp-config.json",
-		"/Users/m.matzat/HTDOCS/default_project_template/lib/webpack.config.js",
-		"/Users/m.matzat/HTDOCS/bmw-stalker/assets/js/animation-section.js",
-		"/Users/m.matzat/HTDOCS/bmw-stalker/dist/webpack/css/style.min.css",
-		"/Users/m.matzat/HTDOCS/bmw-stalker/.gitignore",
-		"/Users/m.matzat/HTDOCS/bmw-stalker/src/pug/incl/css/libraries.pug",
-		"/Users/m.matzat/HTDOCS/bmw-stalker/assets/js/animation-intro.js"
+		"/Users/m.matzat/HTDOCS/bmw-stalker/lib/webpack.config.lite.js"
 	],
 	"find":
 	{
-		"height": 30.0
+		"height": 48.0
 	},
 	"find_in_files":
 	{
@@ -727,6 +728,18 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"html",
+			",\n\t\t\t\t\t",
+			"../assets",
+			"font-family",
+			"font-face",
+			"font",
+			"fonts/",
+			"./",
+			"../",
+			"$CURDIR",
+			"CLIENT",
+			"SERVER",
 			"STATUS",
 			"echo",
 			" new",
@@ -767,7 +780,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 30.0
+		"height": 32.0
 	},
 	"input":
 	{
@@ -824,7 +837,7 @@
 	"project": "stateSRV.sublime-project",
 	"replace":
 	{
-		"height": 56.0
+		"height": 60.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -862,7 +875,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 280.0,
+	"side_bar_width": 239.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

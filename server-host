@@ -3,6 +3,7 @@
 
 # VARS & CONF
 CURDIR=$(dirname $0)
+declare -A CLIENTS
 CONF="$CURDIR/conf/server-host.conf"
 source $CONF
 
