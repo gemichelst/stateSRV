@@ -12,7 +12,7 @@
 ///////////////////////////////
 
 # VERSION
-define("VERSION", "0.02112019");
+define("VERSION", "0.03112019");
 
 # MISC
 $serverFunctionsIncURL    	= $_SERVER['PHP_SELF'];
