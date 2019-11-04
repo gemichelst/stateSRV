@@ -1,5 +1,5 @@
-{
-    "GENERATED_AT": "Thursday, 31 October 2019 22:48:24",
+[{
+    "GENERATED_AT": [ "Thursday, 31 October 2019 22:48:24" ],
     "HOSTNAME": "",
     "LASTLOGINS": ["Thu 31 Oct 13:33 from 192.168.11.52"],
     "UPTIME":
@@ -43,4 +43,4 @@
         "LAN": "192.168.11.19",
         "WLAN": "---"
     }
-}
+}]

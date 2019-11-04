@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"ADD",
+				"ADDTOUSRLOCALBIN"
+			],
+			[
+				"AP",
+				"APACHE2CONF"
+			],
+			[
+				"CRO",
+				"CRONTABFILE"
+			],
+			[
+				"CRON",
+				"CRONTAB_ENABLE"
+			],
+			[
+				"PRE",
+				"PREFIXDIR_default"
+			],
+			[
 				"net",
 				"networkWLAN"
 			],
@@ -494,31 +514,19 @@
 			[
 				"fl",
 				"float\tproperty"
-			],
-			[
-				"hr",
-				"href\tAttr"
-			],
-			[
-				"roundU",
-				"roundUp(num, precision)\ttef_view_clean.html"
-			],
-			[
-				"Round",
-				"roundUp(num, precision)\ttef_view_clean.html"
-			],
-			[
-				"bar1-va",
-				"bar1-1-value\t style.css"
-			],
-			[
-				"al",
-				"align-items"
 			]
 		]
 	},
 	"buffers":
 	[
+		{
+			"file": "/Users/m.matzat/Desktop/stateSRV/server-host",
+			"settings":
+			{
+				"buffer_size": 696,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -578,11 +586,16 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/m.matzat/Desktop/stateSRV",
-		"/Users/m.matzat/Desktop/stateSRV/tools"
+		"/Users/m.matzat/Desktop/stateSRV"
 	],
 	"file_history":
 	[
+		"/Users/m.matzat/Desktop/stateSRV/tools/install",
+		"/Users/m.matzat/Desktop/stateSRV/conf/statSRV.conf",
+		"/Users/m.matzat/Desktop/stateSRV/server-host",
+		"/Applications/stateSRV",
+		"/Users/m.matzat/Desktop/stateSRV/www/src/inc/definitions-vars.inc.php",
+		"/Users/m.matzat/Desktop/stateSRV/conf/server-host.conf",
 		"/Users/m.matzat/HTDOCS/bmw-stalker/src/assets/js/animation-section.js",
 		"/Users/m.matzat/Desktop/stateSRV/www/src/stylus/_sections/_home.styl",
 		"/Users/m.matzat/Desktop/stateSRV/www/index.php",
@@ -596,7 +609,6 @@
 		"/Users/m.matzat/Desktop/stateSRV/data/server.bananadev.json",
 		"/Users/m.matzat/Desktop/stateSRV/data/server.stornas.json",
 		"/Users/m.matzat/Desktop/stateSRV/data/server.readynas.json",
-		"/Users/m.matzat/Desktop/stateSRV/www/src/inc/definitions-vars.inc.php",
 		"/Users/m.matzat/HTDOCS/bmw-stalker/src/php/feedbot-RCS.php",
 		"/Users/m.matzat/HTDOCS/bmw-stalker/src/php/inc/definition.vars.inc.php",
 		"/Users/m.matzat/Desktop/stateSRV/www/src/vars.inc.php",
@@ -607,10 +619,7 @@
 		"/Users/m.matzat/Desktop/stateSRV/www/src/stylus/_base/_material.styl",
 		"/Users/m.matzat/Desktop/stateSRV/www/libs/material/roboto/Roboto.css",
 		"/Users/m.matzat/Desktop/stateSRV/VERSION",
-		"/Users/m.matzat/Desktop/stateSRV/conf/server-host.conf",
 		"/Users/m.matzat/Desktop/stateSRV/conf/server-client.conf",
-		"/Users/m.matzat/Desktop/stateSRV/server-host",
-		"/Users/m.matzat/Desktop/stateSRV/tools/install",
 		"/Users/m.matzat/Desktop/stateSRV/tools/fix-permissions",
 		"/Users/m.matzat/Desktop/stateSRV/tools/generate-json",
 		"/Users/m.matzat/Desktop/stateSRV/tools/generate-device",
@@ -708,9 +717,7 @@
 		"/Users/m.matzat/HTDOCS/LIKETHISLIKETHAT/index.html",
 		"/Users/m.matzat/HTDOCS/bmw-stalker/dist/section-static.html",
 		"/Users/m.matzat/HTDOCS/bmw-stalker/dist/index-static.html",
-		"/Users/m.matzat/HTDOCS/LIKETHISLIKETHAT/assets/js/ltlt-default.js",
-		"/Users/m.matzat/HTDOCS/bmw-stalker/bmw-stalker.log",
-		"/Users/m.matzat/HTDOCS/bmw-stalker/lib/webpack.config.lite.js"
+		"/Users/m.matzat/HTDOCS/LIKETHISLIKETHAT/assets/js/ltlt-default.js"
 	],
 	"find":
 	{
@@ -728,6 +735,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"'",
+			"elif",
+			"else",
+			"read",
+			"_default",
 			"html",
 			",\n\t\t\t\t\t",
 			"../assets",
@@ -773,8 +785,41 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "/Users/m.matzat/Desktop/stateSRV/server-host",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 696,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								249,
+								249
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/ShellScript/Bash.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],

@@ -90,8 +90,7 @@ a img {
   border: none;
 }
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 body {
   height: 100%;
@@ -340,7 +339,60 @@ section header h2 {
   color: #fff;
   border-bottom: 1px solid #fff;
 }
+#section1 .content .client-list_data-container {
+  padding: 2.5rem;
+}
+#section1 .content .client-list_data-container .client-list_data-table .client-list_data-table_content {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 17.6%;
+  margin-left: 0%;
+  margin-right: 3%;
+  text-align: center;
+  padding: 1.5rem;
+}
+#section1 .content .client-list_data-container .client-list_data-table .client-list_data-table_content:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+#section1 .content .client-list_data-container .client-list_data-table .client-list_data-table_content:nth-child(n) {
+  margin-right: 3%;
+  float: left;
+  clear: none;
+}
+#section1 .content .client-list_data-container .client-list_data-table .client-list_data-table_content:nth-child(5n) {
+  margin-right: 0%;
+  float: right;
+}
+#section1 .content .client-list_data-container .client-list_data-table .client-list_data-table_content:nth-child(5n + 1) {
+  clear: both;
+}
+#section1 .content .client-list_data-container .client-list_data-table .client-list_data-table_content .icon {
+  float: left;
+}
+#section1 .content .client-list_data-container .client-list_data-table .client-list_data-table_content .title {
+  float: left;
+  color: rgba(255,255,255,0.75);
+  font-weight: 700;
+}
+#section1 .content .client-list_data-container .client-list_data-table .client-list_data-table_content .title .icon {
+  float: right;
+}
+#section1 .content .client-list_data-container .client-list_data-table .client-list_data-table_content .content {
+  float: right;
+  color: rgba(255,255,255,0.5);
+  font-weight: 300;
+}
+#section1 .content .client-list_data-container .client-list_data-table .client-list_data-table_content .content .icon {
+  float: right;
+}
+#section1 .content .client-list_data-container .client-list_data-list {
+  padding-top: 2.5rem;
+}
 #section1 .footer {
+  background-color: #000;
   z-index: 100;
   width: 100%;
   height: 5vh;
@@ -348,6 +400,38 @@ section header h2 {
   font-size: 16px;
   text-align: right;
   position: relative;
-  bottom: 10vh;
+  bottom: 2vh;
+}
+#section1 .footer .footer-column {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 48.5%;
+  margin-left: 0%;
+  margin-right: 3%;
+  padding: 1.5vh;
+}
+#section1 .footer .footer-column:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+#section1 .footer .footer-column:nth-child(n) {
+  margin-right: 3%;
+  float: left;
+  clear: none;
+}
+#section1 .footer .footer-column:nth-child(2n) {
+  margin-right: 0%;
+  float: right;
+}
+#section1 .footer .footer-column:nth-child(2n + 1) {
+  clear: both;
+}
+#section1 .footer .footer-column:nth-of-type(1) {
+  text-align: left;
+}
+#section1 .footer .footer-column:nth-of-type(2) {
+  text-align: right;
 }
 /*# sourceMappingURL=style.css.map */

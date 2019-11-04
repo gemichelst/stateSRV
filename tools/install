@@ -47,6 +47,11 @@ fi
 # MKDIR & COPY
 echo "> CREATING DIR: $TARGETPATH1"
 mkdir -p $TARGETPATH1
+STATSRVCONF="/etc/statSRV.conf"
+echo "> CREATING CONF FILE: $TARGETPATH1/statSRV.conf"
+touch $STATSRVCONF
+echo "STATSRVPATH=\"$TARGETPATH1\"" > $STATSRVCONF
+chmod 755 $STATSRVCONF
 echo "> COPYING FILES TO: $TARGETPATH2"
 cp -r "$SOURCEPATH/" $TARGETPATH2
 
@@ -84,8 +89,7 @@ read -p > "> ADD EXECUTABLES TO /usr/local/bin ?   (y/N): " ADDTOUSRLOCALBIN
 if [ $ADDTOUSRLOCALBIN == "y"]
 then
 	echo "> ADDING EXECUTABLES TO: /usr/local/bin"
-	addToUsrLocalBin server-client
-	addToUsrLocalBin server-host
+	addToUsrLocalBin statSRV
 else
 	echo "> ADDING EXECUTABLES TO: /usr/local/bin => skipped"
 fi
@@ -99,11 +103,13 @@ then
 	if [ -f "~/.bash_profile" ]
 	then
 		echo "> ADDING VARS TO: ~/.bash_profile"
-		echo 'export PATH="$TARGETPATH1:$PATH"' >> ~/.bash_profile
+		echo "export PATH=\"$TARGETPATH1:\$PATH\"" >> ~/.bash_profile
+		echo "export STATSRVPATH=\"$TARGETPATH1\"" >> ~/.bash_profile
 		ADDEDTOPROFILEFILE="~/.bash_profile"
 	else
 		echo "> ADDING VARS TO: ~/.profile"
-		echo 'export PATH="$TARGETPATH1:$PATH"' >> ~/.profile
+		echo "export PATH=\"$TARGETPATH1:\$PATH\"" >> ~/.profile
+		echo "export STATSRVPATH=\"$TARGETPATH1\"" >> ~/.profile
 		ADDEDTOPROFILEFILE="~/.profile"
 	fi
 else
@@ -191,19 +197,20 @@ fi
 if [ $ADDTOPROFILE == "y" ]
 then
 	echo "> stateSRV PATH WAS PERMANENT ADDED TO PROFILE: $ADDEDTOPROFILEFILE"
-	echo "> usage for client:\n\t\tstateSRV-client [path/to/server-client.conf]"
+	echo "> usage for client:\n\t\tstateSRV client [path/to/server-client.conf]"
 	echo "> [path/to/server-client.conf] == optional"
-	echo "> usage for server:\n\t\tstateSRV-server [path/to/server-host.conf]"
+	echo "> usage for server:\n\t\tstateSRV server [path/to/server-host.conf]"
 	echo "> [path/to/server-host.conf] == optional"
 else
 	echo "> for more simpler use of stateSRV ==>"
 	echo "> add the following line to your .profile / .bashrc / .bash-profile"
-	echo 'export PATH=\"\$TARGETPATH1:\$PATH\"'
+	echo 'export PATH=\"$TARGETPATH1:\$PATH\"'
+	echo 'export STATSRV=\"$TARGETPATH\"'
 	echo " "
 	echo "> stateSRV PATH WAS TEMPORARY ADDED TO SESSION"
-	echo "> usage for client:\n\t\t$TARGETPATH1/stateSRV-client [path/to/server-client.conf]"
+	echo "> usage for client:\n\t\t$TARGETPATH1/stateSRV client [path/to/server-client.conf]"
 	echo "> [path/to/server-client.conf] == optional"
-	echo "> usage for server:\n\t\t$TARGETPATH1/stateSRV-server [path/to/server-host.conf]"
+	echo "> usage for server:\n\t\t$TARGETPATH1/stateSRV server [path/to/server-host.conf]"
 	echo "> [path/to/server-host.conf] == optional"
 fi
 echo "--------------------------------------------------------"

@@ -35,7 +35,7 @@ readClient('server.bananadev.json');
     <meta name="application-name" content="STATE-SERVER">
     <meta name="author" content="Michael Matzat (gemichelst.de)">
     <meta name="description" content="">
-    <link rel="stylesheet" href="./lib/libs/material/mdc-components/material-components-web/dist/material-components-web.css">
+    <link rel="stylesheet" href="./lib/node_modules/material-components-web/dist/material-components-web.css">
     <link rel="stylesheet" href="./lib/libs/material/roboto/Roboto.css">
     <link rel="stylesheet" href="./lib/libs/material/mdc-icons/material-icons.css">
     <link rel="stylesheet" href="./assets/css/style.css">
@@ -58,14 +58,38 @@ readClient('server.bananadev.json');
           </div>
           <?php $clientsList = listClientsAsList(); echo $clientsList; ?>
         </div>
-        <div id="client-list_data" class="client-list_data"></div>
+        <div class="client-list_data-container">
+          <div class="client-list_data-table">
+            <div class="client-list_data-table_content">
+              <div class="title">
+                <div class="icon"><img src="./assets/images/icons/host.svg"/></div>
+                HOSTNAME:&nbsp;
+              </div>
+            </div>
+            <div class="client-list_data-table_content">
+              <div class="content">bananaDEV</div>
+            </div>
+            <div class="client-list_data-table_content">&nbsp;</div>
+            <div class="client-list_data-table_content">
+              <div class="content">Thursday, 31 October 2019 20:37:30</div>
+            </div>
+            <div class="client-list_data-table_content">COL5</div>
+          </div>
+        </div>
       </div>
 
-      <div class="footer"></div>
+      <div class="footer">
+        <div class="footer-column">
+          &nbsp;
+        </div>
+        <div class="footer-column">
+          &copy; <?php echo date('Y'); ?>
+        </div>
+      </div>
     </section>
   </body>
   <script type="text/javascript" src="./lib/libs/jquery/jquery-3.4.1.min.js"></script>
-  <script type="text/javascript" src="./lib/libs/material/mdc-components/material-components-web/dist/material-components-web.js"></script>
+  <script type="text/javascript" src="./lib/node_modules/material-components-web/dist/material-components-web.js"></script>
   <script type="text/javascript" src="./assets/js/script-default.js"></script>
   <script>window.mdc.autoInit();</script>
 </html>

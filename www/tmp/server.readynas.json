@@ -1,5 +1,5 @@
-{
-    "GENERATED_AT": "Thursday, 31 October 2019 20:37:30",
+[{
+    "GENERATED_AT": [ "Thursday, 31 October 2019 20:37:30" ],
     "HOSTNAME": "readyNAS",
     "UPTIME":
     {
@@ -42,4 +42,4 @@
         "LAN": "192.168.11.22",
         "WLAN": "---"
     }
-}
+}]
