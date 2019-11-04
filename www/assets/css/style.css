@@ -342,50 +342,31 @@ section header h2 {
 #section1 .content .client-list_data-container {
   padding: 2.5rem;
 }
+#section1 .content .client-list_data-container .client-list_data-table {
+  min-height: 75vh;
+  width: 50vw;
+}
 #section1 .content .client-list_data-container .client-list_data-table .client-list_data-table_content {
   float: left;
-  clear: none;
-  text-align: inherit;
-  width: 17.6%;
-  margin-left: 0%;
-  margin-right: 3%;
   text-align: center;
-  padding: 1.5rem;
-}
-#section1 .content .client-list_data-container .client-list_data-table .client-list_data-table_content:after {
-  content: "";
-  display: block;
-  clear: both;
-}
-#section1 .content .client-list_data-container .client-list_data-table .client-list_data-table_content:nth-child(n) {
-  margin-right: 3%;
-  float: left;
-  clear: none;
-}
-#section1 .content .client-list_data-container .client-list_data-table .client-list_data-table_content:nth-child(5n) {
-  margin-right: 0%;
-  float: right;
-}
-#section1 .content .client-list_data-container .client-list_data-table .client-list_data-table_content:nth-child(5n + 1) {
-  clear: both;
 }
 #section1 .content .client-list_data-container .client-list_data-table .client-list_data-table_content .icon {
   float: left;
 }
-#section1 .content .client-list_data-container .client-list_data-table .client-list_data-table_content .title {
+#section1 .content .client-list_data-container .client-list_data-table .client-list_data-table_content .client-title {
   float: left;
   color: rgba(255,255,255,0.75);
   font-weight: 700;
 }
-#section1 .content .client-list_data-container .client-list_data-table .client-list_data-table_content .title .icon {
+#section1 .content .client-list_data-container .client-list_data-table .client-list_data-table_content .client-title .icon {
   float: right;
 }
-#section1 .content .client-list_data-container .client-list_data-table .client-list_data-table_content .content {
+#section1 .content .client-list_data-container .client-list_data-table .client-list_data-table_content .client-content {
   float: right;
   color: rgba(255,255,255,0.5);
   font-weight: 300;
 }
-#section1 .content .client-list_data-container .client-list_data-table .client-list_data-table_content .content .icon {
+#section1 .content .client-list_data-container .client-list_data-table .client-list_data-table_content .client-content .client-icon {
   float: right;
 }
 #section1 .content .client-list_data-container .client-list_data-list {

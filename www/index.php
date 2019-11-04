@@ -61,19 +61,24 @@ readClient('server.bananadev.json');
         <div class="client-list_data-container">
           <div class="client-list_data-table">
             <div class="client-list_data-table_content">
-              <div class="title">
-                <div class="icon"><img src="./assets/images/icons/host.svg"/></div>
+              <div class="client-title">
+                <div class="client-icon"><img src="./assets/images/icons/host.svg"/></div>
                 HOSTNAME:&nbsp;
               </div>
             </div>
             <div class="client-list_data-table_content">
-              <div class="content">bananaDEV</div>
+              <div class="client-content">bananaDEV</div>
             </div>
-            <div class="client-list_data-table_content">&nbsp;</div>
             <div class="client-list_data-table_content">
-              <div class="content">Thursday, 31 October 2019 20:37:30</div>
+              <div class="client-title">
+                <div class="client-icon"><img src="./assets/images/icons/timelapse.svg"/></div>
+                GENERATED AT:&nbsp;
+              </div>
             </div>
-            <div class="client-list_data-table_content">COL5</div>
+            <br/>
+            <div class="client-list_data-table_content">
+              <div class="client-content">Thursday, 31 October 2019 20:37:30</div>
+            </div>
           </div>
         </div>
       </div>
