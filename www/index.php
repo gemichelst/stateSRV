@@ -59,27 +59,7 @@ readClient('server.bananadev.json');
           <?php $clientsList = listClientsAsList(); echo $clientsList; ?>
         </div>
         <div class="client-list_data-container">
-          <div class="client-list_data-table">
-            <div class="client-list_data-table_content">
-              <div class="client-title">
-                <div class="client-icon"><img src="./assets/images/icons/host.svg"/></div>
-                HOSTNAME:&nbsp;
-              </div>
-            </div>
-            <div class="client-list_data-table_content">
-              <div class="client-content">bananaDEV</div>
-            </div>
-            <div class="client-list_data-table_content">
-              <div class="client-title">
-                <div class="client-icon"><img src="./assets/images/icons/timelapse.svg"/></div>
-                GENERATED AT:&nbsp;
-              </div>
-            </div>
-            <br/>
-            <div class="client-list_data-table_content">
-              <div class="client-content">Thursday, 31 October 2019 20:37:30</div>
-            </div>
-          </div>
+          
         </div>
       </div>
 

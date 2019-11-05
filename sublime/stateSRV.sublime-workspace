@@ -4,122 +4,6 @@
 		"selected_items":
 		[
 			[
-				"ADD",
-				"ADDTOUSRLOCALBIN"
-			],
-			[
-				"AP",
-				"APACHE2CONF"
-			],
-			[
-				"CRO",
-				"CRONTABFILE"
-			],
-			[
-				"CRON",
-				"CRONTAB_ENABLE"
-			],
-			[
-				"PRE",
-				"PREFIXDIR_default"
-			],
-			[
-				"net",
-				"networkWLAN"
-			],
-			[
-				"ram",
-				"ramSwap"
-			],
-			[
-				"sto",
-				"storage2"
-			],
-			[
-				"clients",
-				"clientsList"
-			],
-			[
-				"JSO",
-				"JSONLENGTH"
-			],
-			[
-				"serv",
-				"server-index"
-			],
-			[
-				"bac",
-				"background-color\tproperty"
-			],
-			[
-				"backgrou",
-				"background-size\tstyl"
-			],
-			[
-				"transo",
-				"transition\tstyl"
-			],
-			[
-				"this",
-				"thisElement"
-			],
-			[
-				"border-w",
-				"mask-border-width \tstyl"
-			],
-			[
-				"icon--",
-				"icon--mail"
-			],
-			[
-				"paddi",
-				"padding-top\tstyl"
-			],
-			[
-				"ALTEZ",
-				"ALTEZIEGELEI"
-			],
-			[
-				"back",
-				"background-image\tstyl"
-			],
-			[
-				"ST",
-				"STORYTELLING"
-			],
-			[
-				"di",
-				"div\tTag"
-			],
-			[
-				"sectio",
-				"section2Height"
-			],
-			[
-				"foot",
-				"footer-column--inner"
-			],
-			[
-				"display",
-				"displayWidth"
-			],
-			[
-				"in",
-				"instagramURL"
-			],
-			[
-				"inst",
-				"instagram_url"
-			],
-			[
-				"fon",
-				"font-size\tstyl"
-			],
-			[
-				"app",
-				"appendCardTextClass"
-			],
-			[
 				"tran",
 				"transition\tstyl"
 			],
@@ -220,6 +104,10 @@
 				"material-components-web"
 			],
 			[
+				"in",
+				"independent"
+			],
+			[
 				"a",
 				"aesthetic"
 			],
@@ -280,12 +168,20 @@
 				"type\tAttr"
 			],
 			[
+				"di",
+				"display\tproperty"
+			],
+			[
 				"ani",
 				"animation-name\tproperty"
 			],
 			[
 				"d",
 				"display\tproperty"
+			],
+			[
+				"back",
+				"background-color\tproperty"
 			],
 			[
 				"co",
@@ -372,6 +268,10 @@
 				"scaleX()\ttransform"
 			],
 			[
+				"bac",
+				"background-color\tproperty"
+			],
+			[
 				"fu",
 				"function"
 			],
@@ -386,6 +286,10 @@
 			[
 				"ba",
 				"background-size\tproperty"
+			],
+			[
+				"backgrou",
+				"background-clip\tproperty"
 			],
 			[
 				"b",
@@ -476,6 +380,10 @@
 				"globals\t$GLOBALS['…']"
 			],
 			[
+				"fon",
+				"font-size\tproperty"
+			],
+			[
 				"abs",
 				"absolute"
 			],
@@ -514,19 +422,103 @@
 			[
 				"fl",
 				"float\tproperty"
+			],
+			[
+				"hr",
+				"href\tAttr"
+			],
+			[
+				"roundU",
+				"roundUp(num, precision)\ttef_view_clean.html"
+			],
+			[
+				"Round",
+				"roundUp(num, precision)\ttef_view_clean.html"
+			],
+			[
+				"bar1-va",
+				"bar1-1-value\t style.css"
+			],
+			[
+				"al",
+				"align-items"
+			],
+			[
+				"stroke",
+				"stroke-linejoin\tproperty"
+			],
+			[
+				"ease-in",
+				"ease-in-out"
+			],
+			[
+				"anim",
+				"animation-name"
+			],
+			[
+				"scr",
+				"script\t<script>"
+			],
+			[
+				"le",
+				"left\tproperty"
+			],
+			[
+				"end_d",
+				"end_date_tmp"
+			],
+			[
+				"blue",
+				"skyblue"
+			],
+			[
+				"content",
+				"content--box\t style.css"
+			],
+			[
+				"cen",
+				"center\tTag"
+			],
+			[
+				"widh",
+				"width"
+			],
+			[
+				"colla",
+				"collapsible_popout_p2"
+			],
+			[
+				"FB_user",
+				"FB_user_id"
+			],
+			[
+				"user",
+				"fb_user_followers"
+			],
+			[
+				"fa",
+				"facebook-api-influencer-v2"
+			],
+			[
+				"geo",
+				"geotagged_count"
+			],
+			[
+				"inf",
+				"influencer_fb_id"
+			],
+			[
+				"hash",
+				"hashtags_count"
+			],
+			[
+				"local",
+				"localPort"
 			]
 		]
 	},
 	"buffers":
 	[
-		{
-			"file": "/Users/m.matzat/Desktop/stateSRV/server-host",
-			"settings":
-			{
-				"buffer_size": 696,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -590,138 +582,138 @@
 	],
 	"file_history":
 	[
-		"/Users/m.matzat/Desktop/stateSRV/tools/install",
-		"/Users/m.matzat/Desktop/stateSRV/conf/statSRV.conf",
-		"/Users/m.matzat/Desktop/stateSRV/server-host",
-		"/Applications/stateSRV",
-		"/Users/m.matzat/Desktop/stateSRV/www/src/inc/definitions-vars.inc.php",
-		"/Users/m.matzat/Desktop/stateSRV/conf/server-host.conf",
-		"/Users/m.matzat/HTDOCS/bmw-stalker/src/assets/js/animation-section.js",
-		"/Users/m.matzat/Desktop/stateSRV/www/src/stylus/_sections/_home.styl",
-		"/Users/m.matzat/Desktop/stateSRV/www/index.php",
-		"/Users/m.matzat/Desktop/stateSRV/www/src/inc/functions.inc.php",
-		"/Users/m.matzat/Desktop/stateSRV/www/assets/js/script-default.js",
-		"/Users/m.matzat/Desktop/stateSRV/server-client",
-		"/Users/m.matzat/Desktop/stateSRV/tools/server-index.bash",
-		"/Users/m.matzat/Desktop/stateSRV/server.json",
-		"/Users/m.matzat/HTDOCS/bmw-stalker/src/php/inc/functions.inc.php",
-		"/Users/m.matzat/HTDOCS/bmw-stalker/src/assets/js/animation-intro.js",
-		"/Users/m.matzat/Desktop/stateSRV/data/server.bananadev.json",
-		"/Users/m.matzat/Desktop/stateSRV/data/server.stornas.json",
-		"/Users/m.matzat/Desktop/stateSRV/data/server.readynas.json",
-		"/Users/m.matzat/HTDOCS/bmw-stalker/src/php/feedbot-RCS.php",
-		"/Users/m.matzat/HTDOCS/bmw-stalker/src/php/inc/definition.vars.inc.php",
-		"/Users/m.matzat/Desktop/stateSRV/www/src/vars.inc.php",
-		"/Users/m.matzat/Desktop/stateSRV/www/src/functions.inc.php",
-		"/Users/m.matzat/Desktop/stateSRV/www/src/stylus/_base/_settings.styl",
-		"/Users/m.matzat/Desktop/stateSRV/www/Makefile",
-		"/Users/m.matzat/Desktop/stateSRV/www/src/stylus/_base/_layout.styl",
-		"/Users/m.matzat/Desktop/stateSRV/www/src/stylus/_base/_material.styl",
-		"/Users/m.matzat/Desktop/stateSRV/www/libs/material/roboto/Roboto.css",
-		"/Users/m.matzat/Desktop/stateSRV/VERSION",
-		"/Users/m.matzat/Desktop/stateSRV/conf/server-client.conf",
-		"/Users/m.matzat/Desktop/stateSRV/tools/fix-permissions",
-		"/Users/m.matzat/Desktop/stateSRV/tools/generate-json",
-		"/Users/m.matzat/Desktop/stateSRV/tools/generate-device",
-		"/Users/m.matzat/Desktop/stateSRV/generate-device",
-		"/Users/m.matzat/Desktop/stateSRV/README.md",
-		"/Users/m.matzat/Library/Application Support/Sublime Text 3/Packages/MarkdownEditing/MultiMarkdown.sublime-settings",
-		"/Users/m.matzat/Desktop/stateSRV/server",
-		"/Users/m.matzat/Desktop/stateSRV/install",
-		"/Users/m.matzat/Desktop/stateSRV/status",
-		"/Users/m.matzat/Desktop/stateSRV/server-index.bash",
-		"/Users/m.matzat/Desktop/stateSRV/server.cfg.stornas",
-		"/Users/m.matzat/Desktop/stateSRV/generate-json",
-		"/Users/m.matzat/HTDOCS/bmw-stalker/src/php/api.php",
-		"/Volumes/storage1/SCRIPTS/STORNAS/status-stornas",
-		"/Users/m.matzat/Desktop/status_bananadev",
-		"/Users/m.matzat/HTDOCS/bmw-stalker/src/pug/section-aesthetic.pug",
 		"/Users/m.matzat/HTDOCS/bmw-stalker/src/assets/js/dev.js",
-		"/Users/m.matzat/HTDOCS/bmw-stalker/dist/play-video.php",
-		"/Users/m.matzat/HTDOCS/bmw-stalker/src/stylus/_base/_material.styl",
-		"/Users/m.matzat/HTDOCS/bmw-stalker/src/stylus/_base/_sections.styl",
-		"/Users/m.matzat/HTDOCS/bmw-stalker/src/stylus/_base/_layout.styl",
-		"/Users/m.matzat/HTDOCS/bmw-stalker/src/pug/section-static.pug",
-		"/Users/m.matzat/HTDOCS/bmw-stalker/project.settings.php",
-		"/Users/m.matzat/HTDOCS/bmw-stalker/src/pug/incl/modules/loading-spinner.pug",
-		"/Users/m.matzat/HTDOCS/bmw-stalker/src/pug/incl/modules/snackbar.pug",
-		"/Users/m.matzat/HTDOCS/bmw-stalker/src/pug/incl/modules.pug",
-		"/Users/m.matzat/HTDOCS/bmw-stalker/src/pug/incl/intro-static.pug",
-		"/Users/m.matzat/HTDOCS/dared-studio-2.0/assets/js/script-default.js",
-		"/Users/m.matzat/HTDOCS/LIKETHISLIKETHAT/assets/css/ltlt-default.css",
-		"/Users/m.matzat/HTDOCS/dared-studio-2.0/src/stylus/style.styl",
-		"/Users/m.matzat/HTDOCS/dared-studio-2.0/src/stylus/_base/_settings.styl",
-		"/Users/m.matzat/HTDOCS/dared-studio-2.0/src/stylus/_sections/_home.styl",
-		"/Users/m.matzat/HTDOCS/dared-studio-2.0/src/stylus/_sections/_main.styl",
-		"/Users/m.matzat/HTDOCS/dared-studio-2.0/src/stylus/_base/_base.styl",
-		"/Users/m.matzat/HTDOCS/dared-studio-2.0/dared-studio-2.0.sublime-project",
-		"/Volumes/hdd/www/VHOSTS/dared-studio/index.html",
-		"/Users/m.matzat/HTDOCS/dared-studio-2.0/assets/images/arrow-down-black.svg",
-		"/Users/m.matzat/HTDOCS/dared-studio-2.0/index.html",
-		"/Users/m.matzat/HTDOCS/dared-studio-2.0/assets/images/2.0/icons/icon--mail-white_mini.svg",
-		"/Users/m.matzat/HTDOCS/dared-studio-2.0/assets/images/2.0/icons/icon--instagram-white_mini.svg",
-		"/Users/m.matzat/HTDOCS/dared-studio-2.0/src/stylus/_base/_layout.styl",
-		"/Users/m.matzat/HTDOCS/dared-studio-2.0/assets/images/2.0/additional/instagram-icon.svg",
-		"/Users/m.matzat/HTDOCS/tdWebServices/screens/01_all-enabled.png",
-		"/Users/m.matzat/HTDOCS/tdWebServices/Makefile",
-		"/Users/m.matzat/HTDOCS/tdWebServices/tdWebServices.animation1.svg",
-		"/Users/m.matzat/HTDOCS/tdWebServices/tdWebServices.sublime-project",
-		"/Users/m.matzat/HTDOCS/dared-studio-2.0/Makefile",
-		"/Users/m.matzat/HTDOCS/TD-WEBSERVICES/dared-studio-2.0.sublime-project",
-		"/Users/m.matzat/HTDOCS/dared-studio-2.0/assets/images/2.0/additional/DS_DF_OnePage.txt",
-		"/Users/m.matzat/HTDOCS/dared-studio-2.0/assets/css/font-gotham.css",
-		"/Users/m.matzat/HTDOCS/dared-studio-2.0/lib/libs/material/roboto/Roboto.css",
-		"/Users/m.matzat/HTDOCS/dared-studio-2.0/README.md",
-		"/Users/m.matzat/HTDOCS/bmw-stalker/src/pug/index-static.pug",
-		"/Users/m.matzat/HTDOCS/td-socialfeed/jsonfeed_multiple_bmw.php",
-		"/Users/m.matzat/HTDOCS/td-socialfeed/jsonfeed.php",
-		"/Users/m.matzat/HTDOCS/td-socialfeed/get_content.php",
-		"/Users/m.matzat/HTDOCS/td-socialfeed/influencer_view_data.php",
-		"/Users/m.matzat/HTDOCS/bmw-stalker/src/pug/index.pug",
-		"/Users/m.matzat/HTDOCS/bmw-stalker/src/pug/incl/intro.pug",
-		"/Users/m.matzat/HTDOCS/dared-studio-2.0/src/index.html",
-		"/Users/m.matzat/HTDOCS/bmw-stalker/dist/index.html",
-		"/Users/m.matzat/HTDOCS/bmw-stalker/dist/section-thrill.html",
-		"/Users/m.matzat/HTDOCS/bmw-stalker/database.static.json",
-		"/Users/m.matzat/HTDOCS/bmw-stalker/src/pug/section-thrill.pug",
-		"/Users/m.matzat/HTDOCS/bmw-stalker/src/stylus/_base/_settings.styl",
-		"/Users/m.matzat/HTDOCS/bmw-stalker/dist/assets/images/icons-new/post-likes.svg",
-		"/Users/m.matzat/HTDOCS/bmw-stalker/src/pug/section-independent.pug",
-		"/Users/m.matzat/HTDOCS/bmw-stalker/src/pug/section-pioneering.pug",
-		"/Users/m.matzat/HTDOCS/dared-studio-2.0/src/stylus/_base/_sections.styl",
-		"/Users/m.matzat/HTDOCS/dared-studio-2.0/src/pug/incl/scripts/functions.pug",
-		"/Users/m.matzat/HTDOCS/dared-studio-2.0/src/pug/incl/css/styles.pug",
-		"/Users/m.matzat/HTDOCS/dared-studio-2.0/assets/css/animations.css",
-		"/Users/m.matzat/HTDOCS/dared-studio-2.0/src/pug/index.pug",
-		"/Users/m.matzat/HTDOCS/dared-studio-2.0/src/pug/incl/header/favicon.pug",
-		"/Users/m.matzat/HTDOCS/dared-studio-2.0/src/pug/incl/scripts/libraries.pug",
-		"/Users/m.matzat/HTDOCS/dared-studio-2.0/src/pug/incl/scripts.pug",
-		"/Users/m.matzat/HTDOCS/dared-studio-2.0/src/pug/incl/styles.pug",
-		"/Users/m.matzat/HTDOCS/dared-studio-2.0/src/pug/incl/header/html.pug",
-		"/Users/m.matzat/HTDOCS/dared-studio-2.0/src/pug/incl/header/meta.pug",
-		"/Users/m.matzat/HTDOCS/dared-studio-2.0/src/pug/incl/css/libraries.pug",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/src/assets/js/animation-section.js",
 		"/Users/m.matzat/HTDOCS/bmw-stalker/README.md",
 		"/Users/m.matzat/GIT/real-customer-stalking-node_modules/real-customer-stalking/README.md",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/src/php/inc/functions.inc.php",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/src/php/feedbot-RCS.php",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/src/stylus/_base/_sections.styl",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/src/pug/section-pioneering.pug",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/src/stylus/_base/_material.styl",
 		"/Users/m.matzat/HTDOCS/bmw-stalker/src/stylus/_modules/_loading-spinner.styl",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/src/pug/section-independent.pug",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/src/pug/section-aesthetic.pug",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/src/pug/section-thrill.pug",
 		"/Users/m.matzat/HTDOCS/bmw-stalker/dist/assets/js/main.js",
 		"/Users/m.matzat/HTDOCS/bmw-stalker/dist/assets/js/mdc.js",
 		"/Users/m.matzat/HTDOCS/bmw-stalker/dist/assets/js/script.js",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/src/php/api.php",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/src/pug/incl/modules/loading-spinner.pug",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/src/pug/section-static.pug",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/project.settings.php",
 		"/Users/m.matzat/HTDOCS/bmw-stalker/src/php/inc/instagram-api-v2.php",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/src/stylus/_base/_settings.styl",
 		"/Users/m.matzat/HTDOCS/td-socialfeed/feedbot_bmw_dev.php",
 		"/Users/m.matzat/HTDOCS/bmw-stalker/example-project.settings.php",
 		"/Users/m.matzat/HTDOCS/bmw-stalker/src/php/inc/mysql_connect.inc.php",
 		"/Users/m.matzat/HTDOCS/bmw-stalker/src/php/test.php",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/src/php/inc/definition.vars.inc.php",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/src/pug/index-static.pug",
 		"/Users/m.matzat/HTDOCS/bmw-stalker/Makefile",
 		"/Users/m.matzat/HTDOCS/bmw-stalker/src/stylus/_base/_base.styl",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/src/pug/incl/intro-static.pug",
 		"/Users/m.matzat/HTDOCS/bmw-stalker/src/php/inc/default.vars.inc.php",
 		"/Users/m.matzat/HTDOCS/LIKETHISLIKETHAT/index.html",
 		"/Users/m.matzat/HTDOCS/bmw-stalker/dist/section-static.html",
 		"/Users/m.matzat/HTDOCS/bmw-stalker/dist/index-static.html",
-		"/Users/m.matzat/HTDOCS/LIKETHISLIKETHAT/assets/js/ltlt-default.js"
+		"/Users/m.matzat/HTDOCS/LIKETHISLIKETHAT/assets/js/ltlt-default.js",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/bmw-stalker.log",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/lib/webpack.config.lite.js",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/src/php/defines.php",
+		"/Users/m.matzat/HTDOCS/td-socialfeed/view/BMW/social_pulse_bmw_new_bak.html",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/src/php/bla.json",
+		"/Users/m.matzat/HTDOCS/td-socialfeed/view/BMW/js/social_script_multiple.js",
+		"/Users/m.matzat/HTDOCS/td-socialfeed/view/BMW/js/social_script_multiple_dev.js",
+		"/Users/m.matzat/HTDOCS/td-socialfeed/jsonfeed_multiple_mini_dev.php",
+		"/Users/m.matzat/HTDOCS/td-socialfeed/jsonfeed_multiple_bmw_v2.php",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/project.settings.json",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/sections.data.json",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/src/php/sections.data.json",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/example.project.settings.json",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/database.static.json",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/src/assets/js/vars.js",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/src/stylus/_modules/_snackbar.styl",
+		"/Users/m.matzat/Library/Application Support/Sublime Text 3/Packages/User/Stylus.sublime-settings",
+		"/Users/m.matzat/HTDOCS/default_project_template/project.sublime-project",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/bmw-stalker.sublime-project",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/lib/webpack.config.js",
+		"/Users/m.matzat/Library/Application Support/Sublime Text 3/Packages/Stylus/Stylus.sublime-settings",
+		"/Users/m.matzat/HTDOCS/default_project_template/secure/sftp-config.json",
+		"/Users/m.matzat/HTDOCS/default_project_template/lib/webpack.config.js",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/assets/js/animation-section.js",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/src/pug/index.pug",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/src/stylus/_base/_layout.styl",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/dist/webpack/css/style.min.css",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/src/pug/incl/intro.pug",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/.gitignore",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/src/pug/incl/css/libraries.pug",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/assets/js/animation-intro.js",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/src/pug/incl/styles.pug",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/src/pug/incl/vars.pug",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/src/mdc.js",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/src/pug/incl/scripts.pug",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/src/index.html",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/dist/index.html",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/dist/webpack/vendor.js",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/dist/webpack/css/mdc.bundle.css",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/src/mdc.scss",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/src/pug/incl/css/styles.pug",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/src/mdc.scss.webpack.config.js",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/assets/js/script-default.js",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/lib/node_modules/material-components-web/index.js",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/dist/webpack/script.js",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/src/pug/incl/scripts/libraries.pug",
+		"/Users/m.matzat/HTDOCS/default_project_template/Makefile",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/src/pug/incl/scripts/functions.pug",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/.htaccess",
+		"/Users/m.matzat/HTDOCS/default_project_template/README.md",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/src/pug/incl/header.pug",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/dist/style.js",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/src/app.js",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/lib/webpack.config-bak",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/src/pug/incl/build.pug",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/src/pug/incl/material/cards-row1.pug",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/src/pug/incl/material/cards-row4.pug",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/src/pug/incl/material/cards-row3.pug",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/src/pug/incl/material/cards-row2.pug",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/src/pug/incl/header/meta.pug",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/src/pug/incl/header/favicon.pug",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/lib/package.json",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/lib/node_modules/style-loader/README.md",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/assets/css/style.css",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/lib/webpack.config-bak.js",
+		"/Users/m.matzat/HTDOCS/infomaker/library/package.json",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/lib/pug/section-aesthetic.pug",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/lib/pug/incl/material/cards-row4.pug",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/lib/pug/incl/material/cards-row3.pug",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/lib/pug/incl/material/cards-row2.pug",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/lib/pug/incl/material/cards-row1.pug",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/section-aesthetic.html",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/section-independent.html",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/section-pioneering.html",
+		"/Users/m.matzat/HTDOCS/bmw-stalker/section-thrill.html",
+		"/Volumes/hdd/www/VHOSTS/bmw-stalker/assets/js/animation-intro.js",
+		"/Volumes/hdd/www/VHOSTS/bmw-stalker/assets/js/animation-section.js",
+		"/Volumes/hdd/www/VHOSTS/bmw-stalker/lib/stylus/_base/_sections.styl",
+		"/Volumes/hdd/www/VHOSTS/bmw-stalker/lib/stylus/_base/_layout.styl",
+		"/Volumes/hdd/www/VHOSTS/bmw-stalker/lib/pug/section-aesthetic.pug",
+		"/Volumes/hdd/www/VHOSTS/bmw-stalker/lib/pug/section-thrill.pug",
+		"/Volumes/hdd/www/VHOSTS/bmw-stalker/lib/pug/section-independent.pug",
+		"/Volumes/hdd/www/VHOSTS/bmw-stalker/lib/pug/section-pioneering.pug",
+		"/Volumes/hdd/www/VHOSTS/bmw-stalker/lib/stylus/_base/_material.styl",
+		"/Volumes/hdd/www/VHOSTS/bmw-stalker/lib/node_modules/@material/card/README.md",
+		"/Volumes/hdd/www/VHOSTS/bmw-stalker/lib/pug/incl/material/cards-row4.pug",
+		"/Volumes/hdd/www/VHOSTS/bmw-stalker/lib/pug/incl/material/cards-row3.pug",
+		"/Volumes/hdd/www/VHOSTS/bmw-stalker/lib/pug/incl/material/cards-row2.pug",
+		"/Volumes/hdd/www/VHOSTS/bmw-stalker/lib/pug/incl/material/cards-row1.pug",
+		"/Volumes/hdd/www/VHOSTS/bmw-stalker/lib/pug/incl/scripts/functions.pug",
+		"/Volumes/hdd/www/VHOSTS/bmw-stalker/lib/stylus/_base/_main.styl",
+		"/Volumes/hdd/www/VHOSTS/bmw-stalker/lib/pug/incl/intro.pug"
 	],
 	"find":
 	{
-		"height": 48.0
+		"height": 29.0
 	},
 	"find_in_files":
 	{
@@ -735,39 +727,6 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"'",
-			"elif",
-			"else",
-			"read",
-			"_default",
-			"html",
-			",\n\t\t\t\t\t",
-			"../assets",
-			"font-family",
-			"font-face",
-			"font",
-			"fonts/",
-			"./",
-			"../",
-			"$CURDIR",
-			"CLIENT",
-			"SERVER",
-			"STATUS",
-			"echo",
-			" new",
-			"RCMD",
-			"CMD",
-			"$HEADER",
-			"$ECHOCMD ",
-			"printf",
-			"$NEWLINE",
-			"TAB",
-			"$NEWLINE",
-			"[",
-			",\"",
-			"'",
-			"\"",
-			"echo \"\\r\\n\\t\""
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -785,47 +744,14 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "/Users/m.matzat/Desktop/stateSRV/server-host",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 696,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								249,
-								249
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/ShellScript/Bash.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 32.0
+		"height": 29.0
 	},
 	"input":
 	{
@@ -882,7 +808,7 @@
 	"project": "stateSRV.sublime-project",
 	"replace":
 	{
-		"height": 60.0
+		"height": 54.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -916,11 +842,11 @@
 	"settings":
 	{
 	},
-	"show_minimap": true,
+	"show_minimap": false,
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 239.0,
+	"side_bar_width": 226.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

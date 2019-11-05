@@ -21,9 +21,15 @@ $(".client-list_link").click(function(){
 		uptime,
 		loadavg,
 		cpuTemperature,
-		storage1,
-		storage2,
-		ram,
+		storage1sum,
+		storage1used,
+		storage1free,
+		storage2sum,
+		storage2used,
+		storage2free,
+		storage3sum,
+		storage3used,
+		storage3free,
 		ramUsed,
 		ramFree,
 		ramSwap,
@@ -66,16 +72,16 @@ $(".client-list_link").click(function(){
 				uptime = val.UPTIME.DAYS + ' DAYS ' + val.UPTIME.HOURS + ' HOURS ' + val.UPTIME.MINUTES + ' MINUTES';
 				loadavg = val.LOADAVG[0];
 				cpuTemperature = val.CPU_TEMPERATURE;
-				storage1sum = val.STORAGE1.SUM;
-				storage1free = val.STORAGE1.FREE;
-				storage1used = val.STORAGE1.USED;
-				storage2sum = val.STORAGE2.SUM;
-				storage2free = val.STORAGE2.FREE;
-				storage2used = val.STORAGE2.USED;
-				storage3sum = val.STORAGE3.SUM;
-				storage3free = val.STORAGE3.FREE;
-				storage3used = val.STORAGE3.USED;
-				ram = val.RAM.SUM;
+				storage1sum = val.STORAGE.STORAGE1.SUM;
+				storage1free = val.STORAGE.STORAGE1.FREE;
+				storage1used = val.STORAGE.STORAGE1.USED;
+				storage2sum = val.STORAGE.STORAGE2.SUM;
+				storage2free = val.STORAGE.STORAGE2.FREE;
+				storage2used = val.STORAGE.STORAGE2.USED;
+				storage3sum = val.STORAGE.STORAGE3.SUM;
+				storage3free = val.STORAGE.STORAGE3.FREE;
+				storage3used = val.STORAGE.STORAGE3.USED;
+				ramSum = val.RAM.SUM;
 				ramUsed = val.RAM.USED;
 				ramFree = val.RAM.FREE;
 				ramSwap = val.RAM.SWAP;
@@ -83,7 +89,7 @@ $(".client-list_link").click(function(){
 				networkWLAN = val.NETWORK.WLAN;
 					
 				// HTML CODE
-				var html = '<ul class="client-list_data-list"><li>'+generatedAt+'</li><li>'+hostname+'</li><li>'+lastLogins+'</li><li>'+uptime+'</li><li>'+loadavg+'</li><li>'+cpuTemperature+'</li><li>'+storage1sum+'</li><li>'+storage1used+'</li><li>'+storage1free+'</li><li>'+storage2sum+'</li><li>'+storage2used+'</li><li>'+storage2free+'</li><li>'+storage3sum+'</li><li>'+storage3used+'</li><li>'+storage3free+'</li><li>'+ram+'</li><li>'+ramUsed+'</li><li>'+ramFree+'</li><li>'+ramSwap+'</li><li>'+networkLAN+'</li><li>'+networkWLAN+'</li></ul>';
+				var html = '<!-- DATA TABLE --> <div class="mdc-data-table"> <table class="mdc-data-table__table" aria-label="Dessert calories"> <thead> <tr class="mdc-data-table__header-row"> <th class="mdc-data-table__header-cell" role="columnheader" scope="col">'+hostname+'</th> <th class="mdc-data-table__header-cell mdc-data-table__header-cell--numeric" role="columnheader" scope="col">'+generatedAt+'</th> </tr> </thead> <tbody class="mdc-data-table__content"> <tr class="mdc-data-table__row" style="border-top-color: rgba(0, 0, 0, 1);"> <td class="mdc-data-table__cell">last login: </td> <td class="mdc-data-table__cell mdc-data-table__cell--numeric">'+lastLogins+'</td> </tr> <tr class="mdc-data-table__row"> <td class="mdc-data-table__cell">load average: </td> <td class="mdc-data-table__cell mdc-data-table__cell--numeric">'+loadavg+'</td> </tr> <tr class="mdc-data-table__row"> <td class="mdc-data-table__cell">cpu temp: </td> <td class="mdc-data-table__cell mdc-data-table__cell--numeric">'+cpuTemperature+'</td> </tr> <tr class="mdc-data-table__row" style="border-top-color: rgba(0, 0, 0, 0.75);"> <td class="mdc-data-table__cell">STORAGE1: </td> <td class="mdc-data-table__cell mdc-data-table__cell--numeric"><sum>'+storage1sum+'</sum><used>'+storage1used+'</used><free>'+storage1free+'</free></td> </tr> <tr class="mdc-data-table__row"> <td class="mdc-data-table__cell">STORAGE2: </td> <td class="mdc-data-table__cell mdc-data-table__cell--numeric"><sum>'+storage2sum+'</sum><used>'+storage2used+'</used><free>'+storage1free+'</free></td> </tr> <tr class="mdc-data-table__row"> <td class="mdc-data-table__cell">STORAGE3: </td> <td class="mdc-data-table__cell mdc-data-table__cell--numeric"><sum>'+storage3sum+'</sum><used>'+storage3used+'</used><free>'+storage3free+'</free></td> </tr> <tr class="mdc-data-table__row" style="border-top-color: rgba(0, 0, 0, 0.75);"> <td class="mdc-data-table__cell">RAM: </td> <td class="mdc-data-table__cell mdc-data-table__cell--numeric"><sum>'+ramSum+'</sum><used>'+ramUsed+'</used><free>'+ramFree+'</free></td> </tr> <tr class="mdc-data-table__row" style="border-top-color: rgba(0, 0, 0, 0.75);"> <td class="mdc-data-table__cell">LAN: </td> <td class="mdc-data-table__cell mdc-data-table__cell--numeric">'+networkLAN+'</td> </tr> <tr class="mdc-data-table__row"> <td class="mdc-data-table__cell">WLAN: </td> <td class="mdc-data-table__cell mdc-data-table__cell--numeric">'+networkWLAN+'</td> </tr> </tbody> </table> </div> <!-- DATA TABLE -->';
 				if(debug==true){ console.log('html: ' + html); }
 
 				// DISPLAY DATA TO ID

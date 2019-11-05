@@ -140,6 +140,9 @@ section header h2 {
   font-weight: bold;
   font-size: 32px;
 }
+.mdc-data-table {
+  width: 50vw;
+}
 @-webkit-keyframes slideIN {
   0% {
     opacity: 0;
@@ -340,7 +343,8 @@ section header h2 {
   border-bottom: 1px solid #fff;
 }
 #section1 .content .client-list_data-container {
-  padding: 2.5rem;
+  padding-top: 2.5rem;
+  padding-left: 0.5rem;
 }
 #section1 .content .client-list_data-container .client-list_data-table {
   min-height: 75vh;
