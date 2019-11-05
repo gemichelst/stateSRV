@@ -13,7 +13,7 @@ afterwards install the server
 ```
 git clone git@github.com:gemichelst/stateSRV.git 
 cd stateSRV
-./install
+./tools/install
 ```
 
 ## usage
