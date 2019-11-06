@@ -53,7 +53,9 @@ $(".client-list_link").click(function(){
 	var dataClient = $(this).attr('data-client');
 	if(debug==true) { console.log('dataClient: ' + dataClient); }
 	if(dataClient=='dashboard'){
-		// DASHBOARD DATA
+	
+	// DASHBOARD DATA
+
 
 	} else {
 
@@ -99,12 +101,7 @@ $(".client-list_link").click(function(){
 
 			});
 		});
-
-
-
 	}
 })
-
-
 
 });
