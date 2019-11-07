@@ -1,14 +1,10 @@
 #!/bin/sh
 # stateSRV - getSTATUS/writeJSON
 
-# VARS
+# VARS & CONF
 CURDIR=$(dirname $0)
 CONF="$CURDIR/conf/server-client.conf"
 . $CONF
-
-
-
-
 
 ##########################################
 ## N O # C H A N G E # F R O M # H E R E #

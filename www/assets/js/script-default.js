@@ -30,6 +30,7 @@ $(".client-list_link").click(function(){
 		storage3sum,
 		storage3used,
 		storage3free,
+		ramSum,
 		ramUsed,
 		ramFree,
 		ramSwap,
@@ -42,6 +43,16 @@ $(".client-list_link").click(function(){
 		"border-bottom": "none",
 		"color": "rgba(255,255,255,.75)",
 	});
+	// TABLE_TABLE OUT
+	$(".mdc-data-table").css({
+		"opacity": 0,
+		"transform": "scale(1)",
+		"height": "0vh"
+	});
+	setTimeout(function() {
+		// $( ".client-list_data-container" ).remove();
+		// $('<div class="client-list_data-container"></div>').appendTo('.content');
+	}, 750);
 
 	// SET THIS
 	$(this).css({
@@ -91,16 +102,23 @@ $(".client-list_link").click(function(){
 				networkWLAN = val.NETWORK.WLAN;
 					
 				// HTML CODE
-				var html = '<!-- DATA TABLE --> <div class="mdc-data-table"> <table class="mdc-data-table__table" aria-label="Dessert calories"> <thead> <tr class="mdc-data-table__header-row"> <th class="mdc-data-table__header-cell" role="columnheader" scope="col">'+hostname+'</th> <th class="mdc-data-table__header-cell mdc-data-table__header-cell--numeric" role="columnheader" scope="col">'+generatedAt+'</th> </tr> </thead> <tbody class="mdc-data-table__content"> <tr class="mdc-data-table__row" style="border-top-color: rgba(0, 0, 0, 1);"> <td class="mdc-data-table__cell">last login: </td> <td class="mdc-data-table__cell mdc-data-table__cell--numeric">'+lastLogins+'</td> </tr> <tr class="mdc-data-table__row"> <td class="mdc-data-table__cell">load average: </td> <td class="mdc-data-table__cell mdc-data-table__cell--numeric">'+loadavg+'</td> </tr> <tr class="mdc-data-table__row"> <td class="mdc-data-table__cell">cpu temp: </td> <td class="mdc-data-table__cell mdc-data-table__cell--numeric">'+cpuTemperature+'</td> </tr> <tr class="mdc-data-table__row" style="border-top-color: rgba(0, 0, 0, 0.75);"> <td class="mdc-data-table__cell">STORAGE1: </td> <td class="mdc-data-table__cell mdc-data-table__cell--numeric"><sum>'+storage1sum+'</sum><used>'+storage1used+'</used><free>'+storage1free+'</free></td> </tr> <tr class="mdc-data-table__row"> <td class="mdc-data-table__cell">STORAGE2: </td> <td class="mdc-data-table__cell mdc-data-table__cell--numeric"><sum>'+storage2sum+'</sum><used>'+storage2used+'</used><free>'+storage1free+'</free></td> </tr> <tr class="mdc-data-table__row"> <td class="mdc-data-table__cell">STORAGE3: </td> <td class="mdc-data-table__cell mdc-data-table__cell--numeric"><sum>'+storage3sum+'</sum><used>'+storage3used+'</used><free>'+storage3free+'</free></td> </tr> <tr class="mdc-data-table__row" style="border-top-color: rgba(0, 0, 0, 0.75);"> <td class="mdc-data-table__cell">RAM: </td> <td class="mdc-data-table__cell mdc-data-table__cell--numeric"><sum>'+ramSum+'</sum><used>'+ramUsed+'</used><free>'+ramFree+'</free></td> </tr> <tr class="mdc-data-table__row" style="border-top-color: rgba(0, 0, 0, 0.75);"> <td class="mdc-data-table__cell">LAN: </td> <td class="mdc-data-table__cell mdc-data-table__cell--numeric">'+networkLAN+'</td> </tr> <tr class="mdc-data-table__row"> <td class="mdc-data-table__cell">WLAN: </td> <td class="mdc-data-table__cell mdc-data-table__cell--numeric">'+networkWLAN+'</td> </tr> </tbody> </table> </div> <!-- DATA TABLE -->';
+				var html = '<!-- DATA TABLE --> <div class="mdc-data-table" id="mdc-data-table"> <table class="mdc-data-table__table" aria-label="Dessert calories"> <thead> <tr class="mdc-data-table__header-row"> <th class="mdc-data-table__cell mdc-data-table__icon"><img src="./assets/images/icons/host.svg"></th> <th class="mdc-data-table__header-cell" role="columnheader" scope="col">'+hostname+'</th> <th class="mdc-data-table__header-cell mdc-data-table__header-cell--numeric" role="columnheader" scope="col">'+generatedAt+'</th> </tr> </thead> <tbody class="mdc-data-table__content"> <tr class="mdc-data-table__row" style="border-top-color: rgba(0, 0, 0, 1);"> <td class="mdc-data-table__cell mdc-data-table__icon"><img src="./assets/images/icons/timelapse.svg"></td> <td class="mdc-data-table__cell">last login: </td> <td class="mdc-data-table__cell mdc-data-table__cell--numeric">'+lastLogins+'</td> </tr> <tr class="mdc-data-table__row"> <td class="mdc-data-table__cell mdc-data-table__icon"><img src="./assets/images/icons/gauge.svg"></td> <td class="mdc-data-table__cell">load average: </td> <td class="mdc-data-table__cell mdc-data-table__cell--numeric">'+loadavg+'</td> </tr> <tr class="mdc-data-table__row"> <td class="mdc-data-table__cell mdc-data-table__icon"><img src="./assets/images/icons/temperature-celsius.svg"></td> <td class="mdc-data-table__cell">cpu temp: </td> <td class="mdc-data-table__cell mdc-data-table__cell--numeric">'+cpuTemperature+'</td> </tr> <tr class="mdc-data-table__row" style="border-top-color: rgba(0, 0, 0, 0.75);"> <td class="mdc-data-table__cell mdc-data-table__icon"><img src="./assets/images/icons/harddisk.svg"></td> <td class="mdc-data-table__cell">STORAGE1: </td> <td class="mdc-data-table__cell mdc-data-table__cell--numeric"><sum>'+storage1sum+'</sum><used>'+storage1used+'</used><free>'+storage1free+'</free></td> </tr> <tr class="mdc-data-table__row"> <td class="mdc-data-table__cell mdc-data-table__icon"><img src="./assets/images/icons/harddisk.svg"></td> <td class="mdc-data-table__cell">STORAGE2: </td> <td class="mdc-data-table__cell mdc-data-table__cell--numeric"><sum>'+storage2sum+'</sum><used>'+storage2used+'</used><free>'+storage1free+'</free></td> </tr> <tr class="mdc-data-table__row"> <td class="mdc-data-table__cell mdc-data-table__icon"><img src="./assets/images/icons/harddisk.svg"></td> <td class="mdc-data-table__cell">STORAGE3: </td> <td class="mdc-data-table__cell mdc-data-table__cell--numeric"><sum>'+storage3sum+'</sum><used>'+storage3used+'</used><free>'+storage3free+'</free></td> </tr> <tr class="mdc-data-table__row" style="border-top-color: rgba(0, 0, 0, 0.75);"> <td class="mdc-data-table__cell mdc-data-table__icon"><img src="./assets/images/icons/memory.svg"></td> <td class="mdc-data-table__cell">RAM: </td> <td class="mdc-data-table__cell mdc-data-table__cell--numeric"><sum>'+ramSum+'</sum><used>'+ramUsed+'</used><free>'+ramFree+'</free></td> </tr> <tr class="mdc-data-table__row" style="border-top-color: rgba(0, 0, 0, 0.75);"> <td class="mdc-data-table__cell mdc-data-table__icon"><img src="./assets/images/icons/lan.svg"></td> <td class="mdc-data-table__cell">LAN: </td> <td class="mdc-data-table__cell mdc-data-table__cell--numeric">'+networkLAN+'</td> </tr> <tr class="mdc-data-table__row"> <td class="mdc-data-table__cell mdc-data-table__icon"><img src="./assets/images/icons/wifi.svg"></td> <td class="mdc-data-table__cell">WLAN: </td> <td class="mdc-data-table__cell mdc-data-table__cell--numeric">'+networkWLAN+'</td> </tr> </tbody> </table> </div> <!-- DATA TABLE -->';
 				if(debug==true){ console.log('html: ' + html); }
 
-				// DISPLAY DATA TO ID
-				$( ".client-list_data-container" ).remove();
-				$('<div class="client-list_data-container"></div>').appendTo('.content');
-				$(html).appendTo('.client-list_data-container');
+				// CREATE CONTAINER IN .content && APPEND HTML DATA TABLE TO THIS
+				setTimeout(function() {
+					$( ".client-list_data-container" ).remove();
+					$('<div class="client-list_data-container"></div>').appendTo('.content');
+					$(html).appendTo('.client-list_data-container');
+					$(".mdc-data-table").css({
+						"opacity": 1,
+						"transform": "scale(1)",
+						"height": "56vh"
+					});
+				}, 800);
 
-			});
-		});
+			}); //$.each(data, function(key, val) {
+		}); //var clients = jQuery.getJSON(dataClientFile, function(data) {
 	}
 })
 

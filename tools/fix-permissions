@@ -9,5 +9,7 @@ echo "> chmod server-client sever-host status"
 chmod a+x server-client server-host server-index.bash status
 echo "> chmod json index"
 chmod 755 server.json server-index.bash
-
+echo "> chmod data tmp"
+chmod -R 0775 data/
+chmod -R 0775 www/tmp/ 
 exit 0

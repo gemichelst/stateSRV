@@ -97,6 +97,8 @@ body {
   font-family: 'Roboto', sans-serif;
   color: rgba(0,0,0,0.8);
   font-size: 16px;
+  background-color: rgba(141,215,218,0.66);
+  background: url("../images/background/background-1.png") center no-repeat;
 }
 img {
   max-width: 100%;
@@ -140,8 +142,33 @@ section header h2 {
   font-weight: bold;
   font-size: 32px;
 }
-.mdc-data-table {
-  width: 50vw;
+.mdc-data-table#mdc-data-table {
+  width: 100%;
+  height: 0vh;
+  opacity: 0;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 0.75s ease-in-out;
+  transition: all 0.75s ease-in-out;
+}
+.mdc-data-table#mdc-data-table .mdc-data-table__icon {
+  text-align: center;
+  padding-left: 0.5vw;
+  padding-right: 0vw;
+  width: 3vw !important;
+}
+.material-icons {
+  font-size: 3vh;
+  opacity: 0.5;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+.material-icons:hover {
+  opacity: 1;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 @-webkit-keyframes slideIN {
   0% {
@@ -200,17 +227,29 @@ section header h2 {
   }
 }
 #section1 {
-  background: #000;
+  background: #284b4c;
   background-repeat: no-repeat;
   background-size: cover;
   max-height: 100vh;
   max-width: 100vw;
 }
+#section1 .shadow-light {
+  box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 6px 10px 0px rgba(0,0,0,0.14), 0px 1px 18px 0px rgba(0,0,0,0.12);
+}
+#section1 .shadow-normal {
+  box-shadow: 0px 6px 6px -3px rgba(0,0,0,0.2), 0px 10px 14px 1px rgba(0,0,0,0.14), 0px 4px 18px 3px rgba(0,0,0,0.12);
+}
+#section1 .shadow-huge {
+  box-shadow: 0px 10px 13px -6px rgba(0,0,0,0.2), 0px 20px 31px 3px rgba(0,0,0,0.14), 0px 8px 38px 7px rgba(0,0,0,0.12);
+}
 #section1 .header {
-  font-size: 16px;
-  height: 48px;
+  height: 10vh;
   width: 100%;
-  background: transparent;
+  max-width: 75vw;
+  font-size: 16px;
+  background: rgba(41,93,95,0.66);
+  margin: 0 auto 0 auto;
+  border-radius: 0 0 5px 5px;
 }
 #section1 .header .header-columns {
   float: left;
@@ -238,6 +277,14 @@ section header h2 {
 #section1 .header .header-columns:nth-child(2n + 1) {
   clear: both;
 }
+#section1 .header .header-columns .header-column-logo {
+  margin-top: -0.5vh;
+  margin-left: 0vw;
+  width: auto;
+  height: 105%;
+  background: url("../images/logo/statSRV-bw-logo.svg") left no-repeat;
+  background-size: contain;
+}
 #section1 .header .header-columns .header-column-title {
   padding-top: 2rem;
   color: #fff;
@@ -250,36 +297,14 @@ section header h2 {
   transition: all 0.5s ease-in-out;
 }
 #section1 .header .header-columns .header-column-menu {
-  float: left;
-  clear: none;
-  text-align: inherit;
-  width: 48.5%;
-  margin-left: 0%;
-  margin-right: 3%;
+  float: right;
   padding-top: 2rem;
   color: rgba(255,255,255,0.75);
   font-size: 1rem;
-  text-align: center;
+  text-align: right;
   z-index: 5;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
-}
-#section1 .header .header-columns .header-column-menu:after {
-  content: "";
-  display: block;
-  clear: both;
-}
-#section1 .header .header-columns .header-column-menu:nth-child(n) {
-  margin-right: 3%;
-  float: left;
-  clear: none;
-}
-#section1 .header .header-columns .header-column-menu:nth-child(2n) {
-  margin-right: 0%;
-  float: right;
-}
-#section1 .header .header-columns .header-column-menu:nth-child(2n + 1) {
-  clear: both;
 }
 #section1 .header .header-columns .header-column-menu a {
   color: rgba(255,255,255,0.75);
@@ -290,39 +315,34 @@ section header h2 {
 }
 #section1 .header .header-columns .header-column-menu a:hover {
   color: #fff;
-  border-bottom: 1px solid #fff;
-}
-#section1 .header .header-columns .header-column-menu:nth-of-type(1) {
-  width: 75% !important;
-  text-align: right;
 }
 #section1 .header .header-columns .header-column-menu:nth-of-type(2) {
-  margin-right: -2rem !important;
-  width: 20% !important;
-  text-align: left;
+  margin-right: 1vw;
+}
+#section1 .header .header-columns:nth-of-type(2) {
+  padding-right: 1.5vw;
 }
 #section1 .content {
-  margin-top: 1rem;
-  margin-left: 4.5rem;
-  margin-bottom: 1rem;
+  width: 100%;
+  max-width: 75vw;
+  height: 80vh;
+  margin: -4vh auto 1vh auto;
   color: #fff;
   font-size: 16px;
-  height: 90vh;
-  width: 100%;
-  -webkit-transition: all 0.75s ease-in-out 0.25s;
-  transition: all 0.75s ease-in-out 0.25s;
 }
 #section1 .content .clients-list {
   color: #fff;
+  margin-top: 6.5vh;
 }
 #section1 .content .clients-list .clients-list_client {
   float: left;
-  padding: 0.5rem;
+  padding: 1vh 0.5vw 1vh 1vw;
 }
 #section1 .content .clients-list .clients-list_client a {
   color: rgba(255,255,255,0.75);
   font-weight: 500;
   text-decoration: none;
+  line-height: 1.75;
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
@@ -343,8 +363,8 @@ section header h2 {
   border-bottom: 1px solid #fff;
 }
 #section1 .content .client-list_data-container {
-  padding-top: 2.5rem;
-  padding-left: 0.5rem;
+  padding-top: 4.5vh;
+  box-shadow: 0px 7px 9px -4px rgba(0,0,0,0.2), 0px 14px 21px 2px rgba(0,0,0,0.14), 0px 5px 26px 4px rgba(0,0,0,0.12);
 }
 #section1 .content .client-list_data-container .client-list_data-table {
   min-height: 75vh;
@@ -377,15 +397,15 @@ section header h2 {
   padding-top: 2.5rem;
 }
 #section1 .footer {
-  background-color: #000;
-  z-index: 100;
+  background-color: #192929;
   width: 100%;
-  height: 5vh;
-  color: #fff;
-  font-size: 16px;
-  text-align: right;
-  position: relative;
-  bottom: 2vh;
+  max-width: 75vw;
+  height: 6vh;
+  color: rgba(255,255,255,0.5);
+  font-size: 1em;
+  margin: 2vh auto 0 auto;
+  padding: 2vh;
+  border-radius: 5px 5px 0 0;
 }
 #section1 .footer .footer-column {
   float: left;
@@ -394,7 +414,6 @@ section header h2 {
   width: 48.5%;
   margin-left: 0%;
   margin-right: 3%;
-  padding: 1.5vh;
 }
 #section1 .footer .footer-column:after {
   content: "";

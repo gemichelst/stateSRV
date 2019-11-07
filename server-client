@@ -8,7 +8,7 @@
 CURDIR=$(dirname $0)
 CONF="$CURDIR/conf/server-client.conf"
 
-source $CLIENTCONF
+. $CONF
 
 if [ -z "$1" ]
 then

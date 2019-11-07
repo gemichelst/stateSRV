@@ -26,12 +26,12 @@ readClient('server.bananadev.json');
 <html lang="en">
   <head>
     <title>STATE-SERVER v<?php echo VERSION; ?></title>
-    <!-- <link rel="shortcut icon" href="./assets/images/favicon/favicon.png" type="image/png">
-    <link rel="icon" href="./assets/images/favicon/favicon.png" type="image/png"> -->
+    <link rel="shortcut icon" href="./assets/images/logo/statSRV-icon@0.5x.png" type="image/png">
+    <link rel="icon" href="./assets/images/logo/statSRV-icon@0.5x.png" type="image/png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex, nofollow">
-    <meta http-equiv="Cache-Control" content="max-age=1800">
+   <!--  <meta http-equiv="Cache-Control" content="max-age=1800"> -->
     <meta name="application-name" content="STATE-SERVER">
     <meta name="author" content="Michael Matzat (gemichelst.de)">
     <meta name="description" content="">
@@ -42,13 +42,14 @@ readClient('server.bananadev.json');
   </head>
   <body class="mdc-typography">
     <section id="section1">
-      <div class="header">
+      <div class="header shadow-light">
         <div class="header-columns">
-          <div class="header-column-title">state<strong>SRV</strong> v<?php echo VERSION; ?></div>
+          <div class="header-column-logo"></div>
+          <!-- <div class="header-column-title">state<strong>SRV</strong> v<?php echo VERSION; ?></div> -->
         </div>
         <div class="header-columns">
-          <div class="header-column-menu"><a href="#settings">.settings</a></div>
-          <div class="header-column-menu"><a href="#about">.about</a></div>
+          <div class="header-column-menu"><a href="#settings"><i class="material-icons">settings</i></a></div>
+          <div class="header-column-menu"><a href="#about"><i class="material-icons">help</i></a></div>
         </div>
       </div>
       <div class="content">
@@ -58,22 +59,20 @@ readClient('server.bananadev.json');
           </div>
           <?php $clientsList = listClientsAsList(); echo $clientsList; ?>
         </div>
-        <div class="client-list_data-container">
-          
-        </div>
+        <div class="client-list_data-container"></div>
       </div>
 
-      <div class="footer">
+      <div class="footer shadow-light">
         <div class="footer-column">
-          &nbsp;
+          @github.com | @sourceforge.com
         </div>
         <div class="footer-column">
-          &copy; <?php echo date('Y'); ?>
+          GeMichelst.de <?php echo date('Y'); ?>
         </div>
       </div>
     </section>
   </body>
-  <script type="text/javascript" src="./lib/libs/jquery/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="./lib/node_modules/jquery/dist/jquery.min.js"></script>
   <script type="text/javascript" src="./lib/node_modules/material-components-web/dist/material-components-web.js"></script>
   <script type="text/javascript" src="./assets/js/script-default.js"></script>
   <script>window.mdc.autoInit();</script>

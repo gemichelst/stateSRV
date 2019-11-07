@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"JSON",
+				"JSON_DATA_DIR"
+			],
+			[
+				"JSO",
+				"JSON_DATA_DIR"
+			],
+			[
+				"back",
+				"background-size\tstyl"
+			],
+			[
+				"header-",
+				"header-column-title"
+			],
+			[
 				"tran",
 				"transition\tstyl"
 			],
@@ -178,10 +194,6 @@
 			[
 				"d",
 				"display\tproperty"
-			],
-			[
-				"back",
-				"background-color\tproperty"
 			],
 			[
 				"co",
@@ -502,23 +514,117 @@
 			[
 				"geo",
 				"geotagged_count"
-			],
-			[
-				"inf",
-				"influencer_fb_id"
-			],
-			[
-				"hash",
-				"hashtags_count"
-			],
-			[
-				"local",
-				"localPort"
 			]
 		]
 	},
 	"buffers":
 	[
+		{
+			"file": "/Users/m.matzat/Desktop/stateSRV/www/index.php",
+			"settings":
+			{
+				"buffer_size": 7755,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/m.matzat/Desktop/stateSRV/www/src/inc/functions.inc.php",
+			"settings":
+			{
+				"buffer_size": 2796,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/m.matzat/Desktop/stateSRV/www/src/inc/definitions-vars.inc.php",
+			"settings":
+			{
+				"buffer_size": 1670,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/m.matzat/Desktop/stateSRV/www/src/stylus/_sections/_home.styl",
+			"settings":
+			{
+				"buffer_size": 3040,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/m.matzat/Desktop/stateSRV/www/src/stylus/_base/_material.styl",
+			"settings":
+			{
+				"buffer_size": 766,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/m.matzat/Desktop/stateSRV/server-client",
+			"settings":
+			{
+				"buffer_size": 530,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/m.matzat/Desktop/stateSRV/status",
+			"settings":
+			{
+				"buffer_size": 4083,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/m.matzat/Desktop/stateSRV/server-host",
+			"settings":
+			{
+				"buffer_size": 691,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/m.matzat/Desktop/stateSRV/conf/server-client.conf",
+			"settings":
+			{
+				"buffer_size": 792,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/m.matzat/Desktop/stateSRV/conf/server-host.conf",
+			"settings":
+			{
+				"buffer_size": 267,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/m.matzat/Desktop/stateSRV/conf/statSRV.conf",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/m.matzat/Desktop/stateSRV/www/assets/js/script-default.js",
+			"settings":
+			{
+				"buffer_size": 6660,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -578,10 +684,20 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/m.matzat/Desktop/stateSRV"
+		"/Users/m.matzat/Desktop/stateSRV",
+		"/Users/m.matzat/Desktop/stateSRV/conf",
+		"/Users/m.matzat/Desktop/stateSRV/data"
 	],
 	"file_history":
 	[
+		"/Users/m.matzat/Desktop/stateSRV/tools/fix-permissions",
+		"/Users/m.matzat/Desktop/stateSRV/www/src/stylus/_sections/_home.styl",
+		"/Users/m.matzat/Desktop/stateSRV/status",
+		"/Users/m.matzat/Desktop/stateSRV/www/tmp/server.bananadev.json",
+		"/Users/m.matzat/Desktop/stateSRV/www/src/stylus/_base/_material.styl",
+		"/Users/m.matzat/Desktop/stateSRV/script.js",
+		"/Users/m.matzat/Desktop/stateSRV/data/server.stornas.json",
+		"/Users/m.matzat/Desktop/stateSRV/README.md",
 		"/Users/m.matzat/HTDOCS/bmw-stalker/src/assets/js/dev.js",
 		"/Users/m.matzat/HTDOCS/bmw-stalker/src/assets/js/animation-section.js",
 		"/Users/m.matzat/HTDOCS/bmw-stalker/README.md",
@@ -701,15 +817,7 @@
 		"/Volumes/hdd/www/VHOSTS/bmw-stalker/lib/pug/section-thrill.pug",
 		"/Volumes/hdd/www/VHOSTS/bmw-stalker/lib/pug/section-independent.pug",
 		"/Volumes/hdd/www/VHOSTS/bmw-stalker/lib/pug/section-pioneering.pug",
-		"/Volumes/hdd/www/VHOSTS/bmw-stalker/lib/stylus/_base/_material.styl",
-		"/Volumes/hdd/www/VHOSTS/bmw-stalker/lib/node_modules/@material/card/README.md",
-		"/Volumes/hdd/www/VHOSTS/bmw-stalker/lib/pug/incl/material/cards-row4.pug",
-		"/Volumes/hdd/www/VHOSTS/bmw-stalker/lib/pug/incl/material/cards-row3.pug",
-		"/Volumes/hdd/www/VHOSTS/bmw-stalker/lib/pug/incl/material/cards-row2.pug",
-		"/Volumes/hdd/www/VHOSTS/bmw-stalker/lib/pug/incl/material/cards-row1.pug",
-		"/Volumes/hdd/www/VHOSTS/bmw-stalker/lib/pug/incl/scripts/functions.pug",
-		"/Volumes/hdd/www/VHOSTS/bmw-stalker/lib/stylus/_base/_main.styl",
-		"/Volumes/hdd/www/VHOSTS/bmw-stalker/lib/pug/incl/intro.pug"
+		"/Volumes/hdd/www/VHOSTS/bmw-stalker/lib/stylus/_base/_material.styl"
 	],
 	"find":
 	{
@@ -727,6 +835,13 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"$JSON_DATA_DIR",
+			"JSON_DATA_DIR",
+			"./",
+			"> <",
+			"$STORAGE3_DEVNAME",
+			"$STORAGE2_DEVNAME",
+			"$STORAGE1_DEVNAME"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -744,8 +859,388 @@
 	"groups":
 	[
 		{
+			"selected": 10,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "/Users/m.matzat/Desktop/stateSRV/www/index.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7755,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7,
+								7
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/m.matzat/Desktop/stateSRV/www/src/inc/functions.inc.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2796,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1658,
+								1333
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/Users/m.matzat/Desktop/stateSRV/www/src/inc/definitions-vars.inc.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1670,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								559,
+								559
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/Users/m.matzat/Desktop/stateSRV/www/src/stylus/_sections/_home.styl",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3040,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2269,
+								2237
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Stylus/Stylus.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/Users/m.matzat/Desktop/stateSRV/www/src/stylus/_base/_material.styl",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 766,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								409,
+								409
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Stylus/Stylus.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/Users/m.matzat/Desktop/stateSRV/server-client",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 530,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								155,
+								155
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/ShellScript/Bash.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/Users/m.matzat/Desktop/stateSRV/status",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4083,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								137,
+								137
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/ShellScript/Bash.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/Users/m.matzat/Desktop/stateSRV/server-host",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 691,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								683,
+								683
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/ShellScript/Bash.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "/Users/m.matzat/Desktop/stateSRV/conf/server-client.conf",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 792,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								792,
+								792
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "/Users/m.matzat/Desktop/stateSRV/conf/server-host.conf",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 267,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "/Users/m.matzat/Desktop/stateSRV/conf/statSRV.conf",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "/Users/m.matzat/Desktop/stateSRV/www/assets/js/script-default.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6660,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6369,
+								6273
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				}
 			]
 		}
 	],

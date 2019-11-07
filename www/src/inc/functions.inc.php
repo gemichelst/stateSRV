@@ -6,6 +6,8 @@
 # www.gemichelst.de                              #
 #************************************************#
 
+global $JSON_DATA_DIR;
+
 ///////////////
 // INCLUDE   //
 ///////////////
@@ -18,15 +20,19 @@ function listClients()
 {
 
 	# READ FILES
-	$data			= "../data/";
+	$data			= JSON_DATA_DIR.'/';
 	$clientFiles	= scandir($data);
 	array_splice($clientFiles, 0, 1);
 	array_splice($clientFiles, 0, 1);
 	
 	# OUTPUT FILES
-	// echo "<!-- \n";
-	// print_r($clientFiles);
-	// echo "\n -->\n";
+	if(DEBUG==true)
+	{
+		echo "<!-- \n";
+		echo "\n JSON_DATA_DIR: ".JSON_DATA_DIR."\n";
+		print_r($clientFiles);
+		echo "\n -->\n";
+	}
 
 	# RETURN FILES ARRAY
 	return $clientFiles;
@@ -36,7 +42,7 @@ function copyListClients()
 {
 
 	# READ FILES
-	$data			= "../data/";
+	$data			= JSON_DATA_DIR.'/';
 	$clientFiles	= scandir($data);
 	array_splice($clientFiles, 0, 1);
 	array_splice($clientFiles, 0, 1);
@@ -45,14 +51,18 @@ function copyListClients()
 	# COPY
 	for($i=0;$i<$clientsNum;$i++){
 		// $targetRaw	= explode("../data/",$clientFiles[$i]);
-		$target		= "tmp/".$clientFiles[$i];
-		$copy 		= copy("../data/$clientFiles[$i]",$target);
+		$target		= $_SERVER['DOCUMENT_ROOT']."/tmp/".$clientFiles[$i];
+		if(DEBUG==true){ echo "\n<!-- TARGET: ".$target." -->\n"; }
+		$datadir 	= JSON_DATA_DIR.'/';
+		$file 		= $clientFiles[$i];
+		$datafile 	= $datadir.$file;
+		$copy 		= copy("$datafile",$target);
 	}
 
 }
 function readClient($clientFile)
 {
-	$clientFile = '../data/'.$clientFile;
+	$clientFile = JSON_DATA_DIR.'/'.$clientFile;
 	$json = file_get_contents($clientFile);
 	$jsonData = json_decode($json,true);
 
@@ -61,11 +71,15 @@ function readClient($clientFile)
 	}
 
 	# OUTPUT FILES
-	// echo "\n<!-- JSON: $json -->\n";
-	// echo "\n<!-- JSONDATA: $jsonData -->\n";
-	// echo "<!-- \n";
-	// print_r($clients);
-	// echo "\n -->\n";
+	if(DEBUG==true)
+	{
+		echo "\n<!-- JSON: $json -->\n";
+		echo "\n<!-- JSONDATA: $jsonData -->\n";
+		echo "\n<!-- JSON_DATA_DIR: ".JSON_DATA_DIR."\n";
+		echo "<!-- \n";
+		print_r($clients);
+		echo "\n -->\n";
+	}
 
 	# RETURNN CLIENTS
 	return $clients;
@@ -74,16 +88,20 @@ function listClientsAsList()
 {
 
 	# READ FILES
-	$data			= "../data/";
+	$data			= JSON_DATA_DIR.'/';
 	$clientFiles	= scandir($data);
 	$clientsList 	= "";
 	array_splice($clientFiles, 0, 1);
 	array_splice($clientFiles, 0, 1);
 	
 	# OUTPUT FILES
-	// echo "<!-- \n";
-	// print_r($clientFiles);
-	// echo "\n -->\n";
+	if(DEBUG==true)
+	{
+		echo "<!-- \n";
+		echo "\nJSON_DATA_DIR: ".JSON_DATA_DIR."\n";
+		print_r($clientFiles);
+		echo "\n -->\n";
+	}
 
 	# COUNT
 	$clientsNum 	= count($clientFiles);
@@ -94,6 +112,8 @@ function listClientsAsList()
 		$clientRaw2 = explode(".json",$clientRaw1[1]);
 		$clientsList .= '<div class="clients-list_client"><a class="client-list_link" href="#client-'.$i.'" data-client="client" data-client-file="'.$clientFiles[$i].'">'.$clientRaw2[0].'</a></div>';
 	}
+
+	$clientsList .= '<div class="clients-list_client"><a class="client-list_link" href="#add-client"><i class="material-icons">add</i></a></div>';
 
 	// $clientsList 	= '<div class="clients-list">'.$clientsList.'</div>';
 
