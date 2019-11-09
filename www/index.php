@@ -56,8 +56,8 @@ readClient('server.bananadev.json');
           <div class="header-column-logo"></div>
         </div>
         <div class="header-columns">
-          <div class="header-column-menu"><a href="#settings"><i class="material-icons">settings</i></a></div>
-          <div class="header-column-menu"><a href="#about"><i class="material-icons">help</i></a></div>
+          <div class="header-column-menu"><a href="#settings" id="link--settings" data-link="settings" class="icon-link"><i class="material-icons">settings</i></a></div>
+          <div class="header-column-menu"><a href="#help" id="link--help" data-link="help" class="icon-link"><i class="material-icons">help</i></a></div>
         </div>
       </div>
       <!-- HEADER -->
@@ -67,19 +67,19 @@ readClient('server.bananadev.json');
         <div class="clients-list">
           <div class="clients-list-clients">
             <!-- <div class="clients-list_client_first">
-              <a class="client-list_link_first" href="#dashboard" data-client="dashboard">dashboard</a>
+              <a class="client-list_link_first" href="#dashboard" data-link="dashboard">dashboard</a>
             </div> -->
             <div class="clients-list_client">
-             <a class="client-list_link" href="#dashboard" data-client="dashboard">dashboard</a>
+             <a class="client-list_link" href="#dashboard" data-link="dashboard">dashboard</a>
             </div>
             <?php $clientsList = listClientsAsList(); echo $clientsList; ?>
           </div>
           <div class="client-list-icons">
             <div class="clients-list_icon" id="icon--add-client">
-              <a class="client-list_icon-link" href="#add-client"><i class="material-icons">add</i></a>
+              <a class="client-list_icon-link" id="link--add" href="#add-client" data-link="add"><i class="material-icons">add</i></a>
             </div>
             <div class="clients-list_icon" id="icon--refresh-clients">
-              <a class="client-list_icon-link" href="#refresh-clients"><i class="material-icons">refresh</i></a>
+              <a class="client-list_icon-link" id="link--refresh" href="#refresh-clients" data-link="refresh"><i class="material-icons">refresh</i></a>
             </div>
           </div>
         </div>
