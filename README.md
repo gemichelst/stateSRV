@@ -41,4 +41,4 @@ full example
 developed by Michael Matzat 2019
 www.gemichelst.de
 
-[logo]: https://github.com/gemichelst/stateSRV/blob/master/www/assets/images/logo/statSRV-bw-logo.svg "statSRV-LOGO"
+[logo]: https://github.com/gemichelst/stateSRV/blob/master/www/assets/images/logo/statSRV-logo@0.5x.png "statSRV-LOGO"
