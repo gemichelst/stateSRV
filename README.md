@@ -13,29 +13,33 @@ The CLIENT machines will only collect these data and make them available over tc
 ## installation
 clone this repo and enter the repo dir.
 afterwards install the server
-```
+```bash
 git clone git@github.com:gemichelst/stateSRV.git 
 cd stateSRV
-./tools/install
+/tools/install
 ```
 
 ## usage
-to use this tool as CLIENT you need to install the server like described in the installation section.
-now type the following command to start the server in the background:
-```
-/usr/local/share/stateSRV/server &
+to start this application on client machines which should provide their stats use this command:
+```bash
+statSRV client
 ```
 
 if you need to use another port and another netcat command:
-(default port: 7236, default netcat command: nc)
-```
-/usr/local/share/stateSRV/server [PORT] [NCCMD] &
+(default port: 7236, default nccmd: nc)
+
+```bash
+statSRV [port] [client]
 ```
 
-full example
+[port] is optional
+[nccmd] is optional
+
+to start this application on the host machine which should collect the stats from the clients and provide a webgui to display the data use this command:
+```bash
+statSRV host
 ```
-/usr/local/share/stateSRV/server 9999 netcat &  
-```
+
 
 ## CREDITS
 developed by Michael Matzat 2019
