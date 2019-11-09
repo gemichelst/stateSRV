@@ -159,6 +159,34 @@ section header h2 {
   color: #ff4136;
   padding: 0 1vh 0 1vh;
 }
+.msg--container {
+  width: 100%;
+  margin: 2vh;
+  color: #284b4c;
+}
+.msg--container .msg--container_icon {
+  float: left;
+  color: inherit;
+}
+.msg--container .msg--container_icon .material-icons {
+  font-size: 4vh !important;
+}
+.msg--container .msg--container_title {
+  font-weight: 700;
+  color: inherit;
+  padding-left: 5vw;
+  padding-bottom: 0.25;
+  text-decoration: underline;
+}
+.msg--container .msg--container_message {
+  font-weight: 200;
+  color: inherit;
+  padding-left: 5vw;
+}
+.exec-output {
+  color: #000;
+  margin: 2vh;
+}
 #icon--github {
   background: url("../images/icons/github.svg") center no-repeat;
   background-size: cover;

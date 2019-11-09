@@ -76,7 +76,7 @@ readClient('server.bananadev.json');
               <a class="client-list_icon-link" id="link--add" href="#add-client" data-link="add"><i class="material-icons">add</i></a>
             </div>
             <div class="clients-list_icon" id="icon--refresh-clients">
-              <a class="client-list_icon-link" id="link--refresh" href="#refresh-clients" data-link="refresh"><i class="material-icons">refresh</i></a>
+              <a class="client-list_icon-link refresh--link" id="link--refresh" href="#refresh-clients" data-link="refresh"><i class="material-icons">refresh</i></a>
             </div>
           </div>
         </div>

@@ -208,7 +208,7 @@ $(document).ready(function() {
     ////////////////////
     // REFRESH ACTION //
     ////////////////////
-    $(".client-list_icon-link, .icon-link, .dashboard-link").click(function() {
+    $(".refresh--link").click(function() {
         $("#snackbar").snackbar('IN');
         <?php
 
@@ -231,9 +231,13 @@ $(document).ready(function() {
                 $SPLITDIR       = explode("www",$DOCROOT);
                 $BINDIR         = $SPLITDIR[0];
                 $BINCMD         = 'server-host';
-                $EXECCMD        = $BINDIR.$BINCMD;
-                $BASHEXEC       = exec("cd ".$BINDIR." && bash ./".$BINCMD);
-                // $BASHEXEC       = exec('./$EXECCMD');
+                $BINFULL        = $BINDIR.$BINCMD;
+                $BASHEXEC       = "cd ".$BINDIR."; bash ./".$BINCMD." 2>&1";
+                $EXECOUTPUT     .= "<pre>".exec("$BASHEXEC")."</pre>";
+                $EXECMESSAGE    = (!$EXECOUTPUT) ? 'An Error has occured while executing the REFRESH command. Please read the following STDOUT:' : 'The Refresh command was executed succesfull. STDOUT:';
+                $EXECMSGTITLE   = (!$EXECOUTPUT) ? 'REFRESH FAILED' : 'REFRESH DONE';
+                $EXECMSGICON    = (!$EXECOUTPUT) ? 'error' : 'check_circle';
+                $EXECOUTPUT     = '<div class="msg--container"><div class="msg--container_icon"><i class="material-icons">'.$EXECMSGICON.'</i></div><div class="msg--container_title">'.$EXECMSGTITLE.'</div><div class="msg--container_message"><p>'.$EXECMESSAGE.'</p></div></div><div class="exec-output">'.$EXECOUTPUT.'</div>';
                 
             # COPYING FILES FROM DATA FOLDER TO WWW/TMP
             #
@@ -248,7 +252,6 @@ $(document).ready(function() {
                     print_r("\r\t\t// DOCROOT: $BINDIR\r\t");
                     print_r("\r\t\t// BINHOST: $BINCMD\r\t");
                     print_r("\r\t\t// BASHEXEC: cd ".$BINDIR." && bash ./".$BINCMD."\r\t");
-                    //print_r("\r\t\t// EXECCMD: $EXECCMD\r\t");
                     $EXECHECK1      = ($BASHEXEC) ? print_r("\t// stateSRV-HOST: $BASHEXEC\r\t") : print_r("\t// stateSRV-HOST: FAILED\r\t// stateSRV-HOST: $BASHEXEC\r\t");
                     $EXECHECK2      = ($BASHEXEC) ? print_r("\tconsole.log('stateSRV-HOST: $BASHEXEC');\r") : print_r("\tconsole.log('stateSRV-HOST: FAILED');\r\tconsole.log('stateSRV-HOST: $BASHEXEC');\r");
                     $copyCheck1     = ($copyFiles) ? print_r("\r\t\t// COPY JSON FILES FROM DOC2TMP: SUCCESS\r\t") : print_r("\r\t\t// COPY JSON FILES FROM DOC2TMP: FAILED\r\t");
@@ -256,7 +259,12 @@ $(document).ready(function() {
                 }
             }   
         ?>
+
+        var EXECOUTPUT='<?php echo $EXECOUTPUT; ?>';
         $("#snackbar").snackbar('OUT');
+        setTimeout(function() { 
+            $('.mdc-data-table').html('<?php echo $EXECOUTPUT; ?>');
+        }, 1000);
     });
 
 
@@ -328,7 +336,7 @@ $(document).ready(function() {
         // ELSE
         else {
             dataLink == 'dashboard'
-            var html = '<!-- DATA TABLE --> <div class="mdc-data-table" id="mdc-data-table"></div> <!-- DATA TABLE -->';
+            var html = '<!-- DATA TABLE: ELSE --> <div class="mdc-data-table" id="mdc-data-table"></div> <!-- DATA TABLE -->';
             animatedContentLoader(html);
         }
 
