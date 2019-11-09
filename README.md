@@ -40,6 +40,10 @@ to start this application on the host machine which should collect the stats fro
 statSRV host
 ```
 
+## webgui
+to use the webgui you need a webserver like apache or nginx.
+Add a new vhost or site like usual and set the root dir to the www folder.
+You will find an apache site-config at the folder conf.
 
 ## CREDITS
 developed by Michael Matzat 2019
