@@ -69,8 +69,12 @@ readClient('server.bananadev.json');
       <div class="footer shadow-light">
         <div class="footer-column">
           <div class="icons">
-            <div class="icon" id="icon--github"><div class="tooltip" id="tooltip-github">GITHUB</div></div>
-            <div class="icon" id="icon--sourceforge"><div class="tooltip" id="tooltip-sourceforge">SOURCEFORGE</div></div>
+            <a href="https://github.com/gemichelst/stateSRV" target="_blank">
+              <div class="icon" id="icon--github">
+                <div class="tooltip" id="tooltip-github">GITHUB</div>
+              </div>
+            </a>
+            <!-- <a href="https://github.com/gemichelst/stateSRV"><div class="icon" id="icon--sourceforge"><div class="tooltip" id="tooltip-sourceforge">SOURCEFORGE</div></div></a> -->
           </div>
         </div>
         <div class="footer-column">
