@@ -54,7 +54,7 @@ function animatedContentLoader(html){
     $(".mdc-data-table").animate({
     	"opacity": 0,
     	"height": "0%"
-    }, 300, 'easeInQuint');
+    }, 700, 'easeInQuint');
 
     // DEBUG
     debugOUT('html: '+html,debug);
@@ -112,7 +112,7 @@ $(document).ready(function() {
     ///////////////////////////////////
 	// CONTENT/SETTINGS/ACTION LINKS //
     ///////////////////////////////////
-    $(".client-list_icon-link, .icon-link").click(function() {
+    $(".client-list_icon-link, .icon-link, .dashboard-link").click(function() {
 
     	// LOADINGSPINNER
     	loadingSpinner();
@@ -165,14 +165,22 @@ $(document).ready(function() {
 
         // ADD NEW CLIENT
         else if (dataLink == 'add') {
-        	var html = '<!-- DATA TABLE --> <div class="mdc-data-table" id="mdc-data-table"></div> <!-- DATA TABLE -->';
+            var htmlForm = '<!-- ADD NEW CLIENT --> <div id="add-client-container"> <form id="form-add-client" method="post" accept="<?php echo $PHP_SELF; ?>"> <div class="mdc-text-field mdc-text-field--with-leading-icon" id="input-new-client-adress"> <i class="material-icons mdc-text-field__icon">laptop</i> <input class="mdc-text-field__input" id="text-field-hero-input"> <div class="mdc-line-ripple"></div> <label for="text-field-hero-input" class="mdc-floating-label">PROTOCOL://IP:PORT</label> </div> <div class="mdc-text-field mdc-text-field--with-leading-icon" id="input-new-client-name"> <i class="material-icons mdc-text-field__icon">laptop</i> <input class="mdc-text-field__input" id="text-field-hero-input"> <div class="mdc-line-ripple"></div> <label for="text-field-hero-input" class="mdc-floating-label">DEVICE NAME</label> </div> <button id="button-add-client" class="mdc-button mdc-button--raised" type="submit"> <span class="mdc-button__ripple"></span> <i class="material-icons mdc-button__icon">add</i> <span class="mdc-button__label">ADD</span> </button> </form> </div> <!-- ADD NEW CLIENT --> '
+        	var html = '<!-- DATA TABLE --> <div class="mdc-data-table" id="mdc-data-table">'+htmlForm+'</div> <!-- DATA TABLE -->';
         	animatedContentLoader(html);
         }
 
         // DASHBOARD DATA
-        else {
+        else if (dataLink == 'dashboard') {
         	dataLink == 'dashboard'
         	var html = '<!-- DATA TABLE --> <div class="mdc-data-table" id="mdc-data-table"></div> <!-- DATA TABLE -->';
+            animatedContentLoader(html);
+        }
+
+        // ELSE
+        else {
+            dataLink == 'dashboard'
+            var html = '<!-- DATA TABLE --> <div class="mdc-data-table" id="mdc-data-table"></div> <!-- DATA TABLE -->';
             animatedContentLoader(html);
         }
 
@@ -186,6 +194,10 @@ $(document).ready(function() {
     // CLIENT LIST > CLICK //
     /////////////////////////
     $(".client-list_link").click(function() {
+
+        // CHECK IF DASHBOARD WAS CLICKED
+        // if($(".client-list_link").attr('data-link')=='dashboard') { debugOUT('dashboard detected',debug); } else {
+
 
     	// LOADINGSPINNER
     	loadingSpinner();
@@ -270,5 +282,6 @@ $(document).ready(function() {
 
            	}); //$.each(data, function(key, val) {
         }); //var clients = jQuery.getJSON(dataClientFile, function(data) {
+      // } //if($(".client-list_link").attr('data-link')='dashboard') {
     }) //click
 });

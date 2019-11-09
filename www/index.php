@@ -67,7 +67,7 @@ readClient('server.bananadev.json');
 
 
       <!-- ADD NEW CLIENT -->
-      <div id="add-client">
+      <!-- <div id="add-client-container">
         <form id="form-add-client" method="post" accept="<?php echo $PHP_SELF; ?>">
           <div class="mdc-text-field mdc-text-field--with-leading-icon" id="input-new-client-adress">
             <i class="material-icons mdc-text-field__icon">laptop</i>
@@ -87,16 +87,13 @@ readClient('server.bananadev.json');
             <span class="mdc-button__label">ADD</span>
           </button>
         </form>
-      </div>
+      </div> -->
 
 
         <div class="clients-list">
           <div class="clients-list-clients">
-            <!-- <div class="clients-list_client_first">
-              <a class="client-list_link_first" href="#dashboard" data-link="dashboard">dashboard</a>
-            </div> -->
             <div class="clients-list_client">
-             <a class="client-list_link" href="#dashboard" data-link="dashboard">dashboard</a>
+             <a class="icon-link" href="#dashboard" data-link="dashboard">dashboard</a>
             </div>
             <?php $clientsList = listClientsAsList(); echo $clientsList; ?>
           </div>
