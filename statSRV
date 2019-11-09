@@ -1,0 +1,35 @@
+#!/bin/bash
+# statSRV BIN
+# $1 = client/host
+
+# VARS AND CONFIG
+CURDIR=$(dirname $0)
+BIN_HOST="$CURDIR/server-host"
+BIN_CLIENT="$CURDIR/server-client"
+CONF_HOST="$CURDIR/conf/server-host.conf"
+CONF_CLIENT="$CURDIR/conf/server-client.conf"
+
+if [ "$1" == "client" ]
+then
+	# CLIENT
+	echo "> statSRV CLIENT"
+elif [ "$1" == "host" ]
+then
+	# HOST
+	echo "> statSRV HOST"
+else
+	# USAGE
+	echo "> statSRV"
+	echo "------------------------------"
+	echo "> USAGE: statSRV [client/host] [port] [nc-command]"
+	echo " "
+	echo " "
+	echo "> OPTIONS:"
+	echo "> client =  start as client"
+	echo "> host = start as host"
+	echo "> port = optional start client on port (default: 7236)"
+	echo "> nc-command = optional start client with nc-command (default: nc)"
+	exit 1
+fi
+
+exit 0
