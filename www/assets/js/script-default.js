@@ -51,14 +51,16 @@ $(".client-list_link").click(function(){
 		"padding": "unset"
 	});
 	// SET THIS
-	$(this).css({
-		"color": "rgba(25,41,41,0.5)",
-		"background": "white",
-		"border": "2px solid white",
-		"border-top-right-radius": "10px",
-		"border-top-left-radius": "10px",
-		"padding": "1vh 2vw 2vh 2vw"
-	});
+	// setTimeout(function() {
+		$(this).css({
+			"color": "rgba(25,41,41,0.5)",
+			"background": "white",
+			"border": "2px solid white",
+			"border-top-right-radius": "10px",
+			"border-top-left-radius": "10px",
+			"padding": "1vh 2vw 2vh 2vw"
+		});
+	// }, 75);
 	$(".client-list_link_first").removeClass('client-list_link_first').addClass('client-list_link');
 	$(".clients-list_client_first").removeClass('clients-list_client_first').addClass('clients-list_client');
 
