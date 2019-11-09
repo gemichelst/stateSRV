@@ -1,7 +1,4 @@
 #section1
-	background $green-dark-matt
-	background-repeat no-repeat
-	background-size cover
 	max-height 100vh
 	max-width 100vw
 	.shadow-light
@@ -28,7 +25,7 @@
 				margin-left 0vw
 				width auto
 				height 105%
-				background url('../images/logo/statSRV-bw-logo.svg') left no-repeat
+				background url('../images/logo/statSRV-bw-logo@2x.png') left no-repeat
 				background-size contain
 			.header-column-title
 				padding-top 2rem
@@ -67,9 +64,21 @@
 		margin -4vh auto 1vh auto
 		color $white
 		font-size 16px
+		background $green-darker-opacity
 		.clients-list
 			color $white
 			margin-top 6.5vh
+			.clients-list_icon
+				float left
+				padding 1.5vh 0.5vw 1vh 2vw
+				a
+					color rgba(255,255,255,.75)
+					font-weight 500
+					text-decoration none
+					line-height 1.75
+					transition all .25s ease-in-out
+					&:hover
+						color $white
 			.clients-list_client
 				float left
 				padding 1.5vh 0.5vw 1vh 2vw
@@ -93,12 +102,13 @@
 						color $white
 						border-bottom 1px solid $white
 		.client-list_data-container
-			height 6vh
+			// height 79.5vh
+			height 100%
 			padding-top 4.5vh
 			box-shadow 0px 7px 9px -4px rgba(0, 0, 0, 0.2), 0px 14px 21px 2px rgba(0, 0, 0, 0.14), 0px 5px 26px 4px rgba(0, 0, 0, 0.12)
 			.client-list_data-table
-				min-height 75vh
-				width 50vw
+				// min-height 75vh
+				// width 50vw
 				.client-list_data-table_content
 					float left
 					text-align center
@@ -132,6 +142,40 @@
 		border-radius 5px 5px 0 0
 		.footer-column
 			column(1/2, $cycle: 2)
+			.icons
+				height 3vh
+				.icon
+					float left
+					max-height 24px
+					max-width 24px
+					width 100%
+					height 100%
+					margin-right 2vw
+					transform scale(1)
+					cursor pointer
+					transition all .25s ease-in-out
+					.tooltip
+							opacity 0
+							color rgba(0,0,0,0.75)
+							font-size 0.5rem
+							background rgba(255,255,255,.75)
+							width fit-content
+							border 1px solid $green-darker-matt
+							border-radius 2px
+							padding .5vh
+							position relative
+							top -2.5vh
+							// left -1vw
+							transition opacity 1.5s ease-in-out
+					.tooltip#tooltip-github
+						left -0.75vw
+					.tooltip#tooltip-sourceforge
+						left -1.75vw
+					&:hover
+						transform scale(1.5)
+						fill #FFFFFF
+						.tooltip
+							opacity 1
 		.footer-column:nth-of-type(1)
 			text-align left
 		.footer-column:nth-of-type(2)

@@ -14,7 +14,7 @@
 // global JSON_DATA_DIR, DOCUMENT_ROOT, SERVER_ROOT_URL, SERVER_PROTOCOL;
 
 # VERSION
-define("VERSION", "0.03112019");
+define("VERSION", "0.09112019");
 
 # DEBUG
 define('DEBUG', false);

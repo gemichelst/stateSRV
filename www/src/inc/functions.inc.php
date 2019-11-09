@@ -113,9 +113,7 @@ function listClientsAsList()
 		$clientsList .= '<div class="clients-list_client"><a class="client-list_link" href="#client-'.$i.'" data-client="client" data-client-file="'.$clientFiles[$i].'">'.$clientRaw2[0].'</a></div>';
 	}
 
-	$clientsList .= '<div class="clients-list_client"><a class="client-list_link" href="#add-client"><i class="material-icons">add</i></a></div>';
-
-	// $clientsList 	= '<div class="clients-list">'.$clientsList.'</div>';
+	$clientsList .= '<div class="clients-list_icon" id="icon--add-client"><a class="client-list_link" href="#add-client"><i class="material-icons">add</i></a></div>';
 
 	# RETURN FILES ARRAY
 	return $clientsList;

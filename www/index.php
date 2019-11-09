@@ -25,14 +25,13 @@ readClient('server.bananadev.json');
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>STATE-SERVER v<?php echo VERSION; ?></title>
+    <title>statSRV v<?php echo VERSION; ?></title>
     <link rel="shortcut icon" href="./assets/images/logo/statSRV-icon@0.5x.png" type="image/png">
     <link rel="icon" href="./assets/images/logo/statSRV-icon@0.5x.png" type="image/png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex, nofollow">
-   <!--  <meta http-equiv="Cache-Control" content="max-age=1800"> -->
-    <meta name="application-name" content="STATE-SERVER">
+    <meta name="application-name" content="statSRV">
     <meta name="author" content="Michael Matzat (gemichelst.de)">
     <meta name="description" content="">
     <link rel="stylesheet" href="./lib/node_modules/material-components-web/dist/material-components-web.css">
@@ -41,11 +40,13 @@ readClient('server.bananadev.json');
     <link rel="stylesheet" href="./assets/css/style.css">
   </head>
   <body class="mdc-typography">
+    <div id="loading-spinner" class="loading-spinner_large">
+        <div class="loading-spinner"></div>
+    </div>
     <section id="section1">
       <div class="header shadow-light">
         <div class="header-columns">
           <div class="header-column-logo"></div>
-          <!-- <div class="header-column-title">state<strong>SRV</strong> v<?php echo VERSION; ?></div> -->
         </div>
         <div class="header-columns">
           <div class="header-column-menu"><a href="#settings"><i class="material-icons">settings</i></a></div>
@@ -54,6 +55,9 @@ readClient('server.bananadev.json');
       </div>
       <div class="content">
         <div class="clients-list">
+          <div class="clients-list_icon" id="icon--refresh-clients">
+            <a class="client-list_link" href="#refresh-clients"><i class="material-icons">refresh</i></a>
+          </div>
           <div class="clients-list_client">
             <a class="client-list_link" href="#dashboard" data-client="dashboard">dashboard</a>
           </div>
@@ -64,7 +68,10 @@ readClient('server.bananadev.json');
 
       <div class="footer shadow-light">
         <div class="footer-column">
-          @github.com | @sourceforge.com
+          <div class="icons">
+            <div class="icon" id="icon--github"><div class="tooltip" id="tooltip-github">GITHUB</div></div>
+            <div class="icon" id="icon--sourceforge"><div class="tooltip" id="tooltip-sourceforge">SOURCEFORGE</div></div>
+          </div>
         </div>
         <div class="footer-column">
           GeMichelst.de <?php echo date('Y'); ?>
@@ -73,6 +80,7 @@ readClient('server.bananadev.json');
     </section>
   </body>
   <script type="text/javascript" src="./lib/node_modules/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="./lib/libs/jquery/plugins/jquery.easing.js"></script>
   <script type="text/javascript" src="./lib/node_modules/material-components-web/dist/material-components-web.js"></script>
   <script type="text/javascript" src="./assets/js/script-default.js"></script>
   <script>window.mdc.autoInit();</script>

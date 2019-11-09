@@ -14,6 +14,9 @@ $(document).ready(function() {
 // CLIENT LIST > CLICK
 $(".client-list_link").click(function(){
 
+	//LOADING SPINNER IN
+	$("#loading-spinner").css({ "display": "block", "opacity": 1});
+
 	// VARS
 	var generatedAt,
 		hostname,
@@ -43,31 +46,25 @@ $(".client-list_link").click(function(){
 		"border-bottom": "none",
 		"color": "rgba(255,255,255,.75)",
 	});
-	// TABLE_TABLE OUT
-	$(".mdc-data-table").css({
-		"opacity": 0,
-		"transform": "scale(1)",
-		"height": "0vh"
-	});
-	setTimeout(function() {
-		// $( ".client-list_data-container" ).remove();
-		// $('<div class="client-list_data-container"></div>').appendTo('.content');
-	}, 750);
-
 	// SET THIS
 	$(this).css({
 		"border-bottom": "1px solid white",
 		"color": "white",
 	});
+	// TABLE_TABLE OUT
+	$(".mdc-data-table").animate({
+		"opacity": 0,
+		"height": "0vh"
+	}, 300, 'easeInQuint');
 
 	// LOAD CONTENT
 	var dataClient = $(this).attr('data-client');
 	if(debug==true) { console.log('dataClient: ' + dataClient); }
+
+	
 	if(dataClient=='dashboard'){
 	
 	// DASHBOARD DATA
-
-
 	} else {
 
 		// CLIENT DATA
@@ -110,16 +107,19 @@ $(".client-list_link").click(function(){
 					$( ".client-list_data-container" ).remove();
 					$('<div class="client-list_data-container"></div>').appendTo('.content');
 					$(html).appendTo('.client-list_data-container');
-					$(".mdc-data-table").css({
+					$(".mdc-data-table").animate({
 						"opacity": 1,
-						"transform": "scale(1)",
 						"height": "73vh"
-					});
+					}, 500, 'easeInQuint');
 				}, 800);
 
 			}); //$.each(data, function(key, val) {
 		}); //var clients = jQuery.getJSON(dataClientFile, function(data) {
-	}
-})
+	} //else
+
+	// LOADINGSPINNER OUT
+	setTimeout(function() { $("#loading-spinner").css({"opacity": 0, "display": "none"}); }, 1500);
+
+}) //click
 
 });
