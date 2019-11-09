@@ -1,16 +1,15 @@
 [{
     "GENERATED_AT": [ "Thursday, 31 October 2019 20:37:30" ],
     "HOSTNAME": "readyNAS",
-    "UPTIME":
-    {
-        "DAYS": "0",
+    "LASTLOGINS": [ "Thu 31 Oct 22:13 from 192.168.11.52"],
+    "UPTIME": {
+        "DAYS": "1",
         "HOURS": "10",
-        "MINUTES": "14 Minutes"
+        "MINUTES": "14"
     },
     "LOADAVG": ["0.00", "0.00", "0.00"],
     "CPU_TEMPERATURE": ["0"],
-    "STORAGE":
-    {
+    "STORAGE": {
         "STORAGE1":
         {
             "SUM": "2.0G",

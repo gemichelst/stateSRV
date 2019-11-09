@@ -9,7 +9,10 @@ echo "> chmod server-client sever-host status"
 chmod a+x server-client server-host server-index.bash status statSRV
 echo "> chmod json index"
 chmod 755 server.json server-index.bash
-echo "> chmod data tmp"
+echo "> chown www-data:www-data to www"
+chown -R www-data:www-data www/
+echo "> chmod conf data tmp"
+chmod -R 0775 conf/ 
 chmod -R 0775 data/
 chmod -R 0775 www/tmp/ 
 exit 0

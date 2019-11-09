@@ -19,21 +19,18 @@
 	// position absolute
 	top 0.5rem
 	left 0.5rem
-	background rgba(0,0,0,.5)
+	width 4vw
+	background transparent
 	z-index 100
 	.loading-spinner
 		font-size 10px
-		margin 2.5px auto
+		margin 2.5px 1vw
 		text-indent -9999em
 		width 2.5em
 		height 2.5em
 		border-radius 50%
 		background #ffffff
-		background -moz-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%)
-		background -webkit-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%)
-		background -o-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%)
-		background -ms-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%)
-		background linear-gradient(to right, #ffffff 10%, rgba(255, 255, 255, 0) 42%)
+		background linear-gradient(to right, rgba(41,93,95,0.66) 10%, rgba(40,75,76,1) 42%)
 		position relative
 		-webkit-animation loadingSpinnerNEW 1.4s infinite linear
 		animation loadingSpinnerNEW 1.4s infinite linear
@@ -43,14 +40,14 @@
 	.loading-spinner:before
 		width 50%
 		height 50%
-		background #ffffff
+		background rgba(255,255,255,.75)
 		border-radius 100% 0 0 0
 		position absolute
 		top 0
 		left 0
 		content ''
 	.loading-spinner:after
-		background #747a86
+		background rgba(25,41,41,1)
 		width 75%
 		height 75%
 		border-radius 50%

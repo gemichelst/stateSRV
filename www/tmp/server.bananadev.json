@@ -5,7 +5,7 @@
 	"UPTIME": {
 		"DAYS": "5",
 		"HOURS": "16",
-		"MINUTES": "28 Minutes"
+		"MINUTES": "28"
 	},
 	"LOADAVG": [ "0.45", "0.60", "0.53"],
 	"CPU_TEMPERATURE": ["+47.4°C"],

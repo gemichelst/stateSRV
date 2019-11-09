@@ -6,7 +6,7 @@
 # www.gemichelst.de                              #
 #************************************************#
 
-global $JSON_DATA_DIR;
+global $JSON_DATA_DIR, $VERSION;
 
 ///////////////
 // INCLUDE   //
@@ -58,6 +58,8 @@ function copyListClients()
 		$datafile 	= $datadir.$file;
 		$copy 		= copy("$datafile",$target);
 	}
+
+	return $copy;
 
 }
 function readClient($clientFile)

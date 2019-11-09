@@ -1,0 +1,9 @@
+#!/bin/bash
+# WRITE STATUS TO JSON
+CURDIR=$(dirname $0)
+STATUS="./status"
+TARGET="./server.json"
+echo "STATUS-SCRIPT: $STATUS"
+
+$STATUS
+exit 0

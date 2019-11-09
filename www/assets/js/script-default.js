@@ -88,6 +88,99 @@ function resetActiveLinks(){
         "font-weight": "normal",
     });
 }
+/* CONVERT js.charAt(i) TO $().fn.charAt(i) */
+$.fn.charAt = function(charNum) {
+    var txtCHAR='.',
+        txtIN=this.text(),
+        txtOUT=txtIN.charAt(charNum);
+
+    if (debug==true) { console.log('fn.charAt(' + charNum + ') ==>\n\t\ttxtCHAR: ' + txtCHAR + '\n\t\ttxtIN: ' + txtIN + '\n\t\ttxtOUT: ' + txtOUT); }
+
+    this.text(txtOUT);
+    return this;
+};
+
+/* CONVERT js.charAt(i) TO $().fn.charAt(i) */
+$.fn.insertPoints = function() {
+    var txtCHAR='.',
+        txtIN=this.text(),
+        txtOUT='...';
+
+        switch (txtIN) {
+            case '.':
+                txtOUT = '..';
+                break;
+            case '..':
+                txtOUT = '...';
+                break;
+            case '...':
+                txtOUT = '.';
+                break;
+            default:
+                txtOUT = '...';
+        }
+
+    if (debug==true) { console.log('fn.insertPoints() ==>\n\t\ttxtCHAR: ' + txtCHAR + '\n\t\ttxtIN: ' + txtIN + '\n\t\ttxtOUT: ' + txtOUT); }
+
+    this.text(txtOUT);
+    return this;
+};
+
+/* SNACKBAR */
+if (debug==true) { console.log('charNum(=): 0'); }
+$.fn.snackbar = function(io) {
+
+    // INNER VARS
+    var charNum = 0,
+        msCheck = 0,
+        msTimeout = 0,
+        msMax = 5000,
+        msTime = 250,
+        msLoops = msMax / msTime;
+
+    console.log('io: ' + io);
+
+    // INNER FUNCTIONS
+    function snackbarTIMEOUT(ms) {
+        setTimeout(function() { $("#snackbar > .column > p.text-points").insertPoints(); }, ms);
+    }
+    function snackbarPTS() {
+        while (msCheck < msLoops){
+            msTimeout = msTime * msCheck;
+            snackbarTIMEOUT(msTimeout);
+            msCheck++;
+            if (debug==true) { console.log('msLoop(' + msCheck + ' OF ' + msLoops + ') ==>\n\t\tmsTimeout(): ' + msTimeout + '\n\t\tmsCheck(++): ' + msCheck); }
+        }
+    }
+    function snackbarIN() {
+        $("#snackbar > .column > p.text").text('refreshing');
+        snackbarPTS();
+    }
+    function snackbarOUT() {
+        $("#snackbar > .column > p.text").text("");
+        $("#snackbar > .column > p.text-points").text("");
+    }
+
+    // ANIMATION
+    if (io=='IN'){
+        console.log('snackbar animation ==> IN');
+        $("#snackbar")
+            .animate({ bottom: "5vh", opacity: 1 }, 500, 'easeInOutExpo', snackbarIN);
+    } 
+    else if (io=='OUT'){
+        console.log('snackbar animation ==> OUT');
+        $("#snackbar").animate({ bottom: "-10vh", opacity: 0 }, 500, 'easeInOutExpo', snackbarOUT);
+    }
+    else {
+        onsole.log('snackbar animation ==> IN/OUT');
+        $("#snackbar")
+            .animate({ bottom: "5vh", opacity: 1 }, 500, 'easeInOutExpo', snackbarIN)
+            .delay(5750)
+            .animate({ bottom: "-10vh", opacity: 0 }, 500, 'easeInOutExpo', snackbarOUT);
+    }
+
+};
+
 
 
 
@@ -104,9 +197,70 @@ function resetActiveLinks(){
 $(document).ready(function() {
 
     // INPUT/TEXTFIELDS
-    $(".mdc-text-field").click(function() {
+    $(".mdc-text-field, .mdc-text-field__input").click(function() {
         $(this).find(".mdc-floating-label").remove().css({"display": "none"});
     });
+
+
+
+
+
+    ////////////////////
+    // REFRESH ACTION //
+    ////////////////////
+    $(".client-list_icon-link, .icon-link, .dashboard-link").click(function() {
+        $("#snackbar").snackbar('IN');
+        <?php
+
+            /*=================================================*/
+            /*    REFRESH CLIENTS (GRAB STATS FROM CLIENTS)    */
+            /*=================================================*/
+            /* REFRESH SERVER.SERVERNAME.JSON FROM DATA FOLDER */
+            /*=================================================*/
+
+            # INCLUDE PHP FUNCTIONS FILE AND CHECK IF IT WORKS
+            #
+                $phpfuncFILE    = $_SERVER['DOCUMENT_ROOT']."/src/inc/functions.inc.php";
+                $requireFile    = require_once($phpfuncFILE);
+                
+            if($requireFile){
+
+            # STARTING BASH SCRIPT TO GRAB NEW JSON FILES FROM CLIENTS
+            #
+                $DOCROOT        = $_SERVER['DOCUMENT_ROOT'];
+                $SPLITDIR       = explode("www",$DOCROOT);
+                $BINDIR         = $SPLITDIR[0];
+                $BINCMD         = 'server-host';
+                $EXECCMD        = $BINDIR.$BINCMD;
+                $BASHEXEC       = exec("cd ".$BINDIR." && bash ./".$BINCMD);
+                // $BASHEXEC       = exec('./$EXECCMD');
+                
+            # COPYING FILES FROM DATA FOLDER TO WWW/TMP
+            #
+                $copyFiles      = copyListClients();
+                
+            # DEBUG
+            #
+                if(DEBUG==true)
+                {   
+                    $requireCheck1  = ($requireFile) ? print_r("// PHP-FUNCTION-FILE: LOADED ($VERSION)\r\t") : print_r("// PHP-FUNCTION-FILE: FAILED\r\t");
+                    $requireCheck2  = ($requireFile) ? print_r("\tconsole.log('PHP-FUNCTION-FILE: LOADED ($VERSION)');\r\t") : print_r("\tconsole.log('PHP-FUNCTION-FILE: LOADED (".$VERSION.")');\r\t");
+                    print_r("\r\t\t// DOCROOT: $BINDIR\r\t");
+                    print_r("\r\t\t// BINHOST: $BINCMD\r\t");
+                    print_r("\r\t\t// BASHEXEC: cd ".$BINDIR." && bash ./".$BINCMD."\r\t");
+                    //print_r("\r\t\t// EXECCMD: $EXECCMD\r\t");
+                    $EXECHECK1      = ($BASHEXEC) ? print_r("\t// stateSRV-HOST: $BASHEXEC\r\t") : print_r("\t// stateSRV-HOST: FAILED\r\t// stateSRV-HOST: $BASHEXEC\r\t");
+                    $EXECHECK2      = ($BASHEXEC) ? print_r("\tconsole.log('stateSRV-HOST: $BASHEXEC');\r") : print_r("\tconsole.log('stateSRV-HOST: FAILED');\r\tconsole.log('stateSRV-HOST: $BASHEXEC');\r");
+                    $copyCheck1     = ($copyFiles) ? print_r("\r\t\t// COPY JSON FILES FROM DOC2TMP: SUCCESS\r\t") : print_r("\r\t\t// COPY JSON FILES FROM DOC2TMP: FAILED\r\t");
+                    $copyCheck2     = ($copyFiles) ? print_r("\tconsole.log('COPY DOC2TMP: SUCCESS');\r") : print_r("\tconsole.log('COPY DOC2TMP: FAILED');\r");
+                }
+            }   
+        ?>
+        $("#snackbar").snackbar('OUT');
+    });
+
+
+
 
 
     ///////////////////////////////////
@@ -153,12 +307,6 @@ $(document).ready(function() {
 
         // HELP
         else if (dataLink == 'help') {
-        	var html = '<!-- DATA TABLE --> <div class="mdc-data-table" id="mdc-data-table"></div> <!-- DATA TABLE -->';
-            animatedContentLoader(html);
-        }
-       
-        // REFRESH CLIENTS
-        else if (dataLink == 'refresh') {
         	var html = '<!-- DATA TABLE --> <div class="mdc-data-table" id="mdc-data-table"></div> <!-- DATA TABLE -->';
             animatedContentLoader(html);
         }

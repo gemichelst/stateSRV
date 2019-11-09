@@ -15,6 +15,7 @@
 
 # VERSION
 define("VERSION", "0.09112019");
+$VERSION 					= VERSION;
 
 # DEBUG
 define('DEBUG', false);

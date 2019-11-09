@@ -2,14 +2,13 @@
     "GENERATED_AT": [ "Thursday, 31 October 2019 22:48:24" ],
     "HOSTNAME": "storNAS",
     "LASTLOGINS": ["Thu 31 Oct 13:33 from 192.168.11.52"],
-    "UPTIME":
-    {
-        "DAYS": "0",
+    "UPTIME": {
+        "DAYS": "1",
         "HOURS": "9",
-        "MINUTES": "15 Minutes"
+        "MINUTES": "15"
     },
     "LOADAVG": ["0.53", "0.77", "0.76"],
-    "CPU_TEMPERATURE": [""],
+    "CPU_TEMPERATURE": ["0"],
     "STORAGE":
     {
         "STORAGE1":

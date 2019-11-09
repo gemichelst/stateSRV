@@ -1,0 +1,17 @@
+AddDefaultCharset UTF-8
+AddCharset UTF-8 .php
+
+<FilesMatch "\.js$">
+  SetHandler application/x-httpd-php
+  Header set Content-type "application/javascript"
+</FilesMatch>
+
+<FilesMatch "\.html$">
+  SetHandler application/x-httpd-php
+  Header set Content-type "text/html"
+</FilesMatch>
+
+<FilesMatch "\.htm$">
+  SetHandler application/x-httpd-php
+  Header set Content-type "text/html"
+</FilesMatch>
