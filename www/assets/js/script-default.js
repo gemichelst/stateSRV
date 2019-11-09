@@ -59,6 +59,10 @@ $(".client-list_link").click(function(){
 		"border-top-left-radius": "10px",
 		"padding": "1vh 2vw 2vh 2vw"
 	});
+	$(".client-list_link_first").removeClass('client-list_link_first').addClass('client-list_link');
+	$(".clients-list_client_first").removeClass('clients-list_client_first').addClass('clients-list_client');
+
+
 	// TABLE_TABLE OUT
 	$(".mdc-data-table").animate({
 		"opacity": 0,

@@ -40,10 +40,17 @@ readClient('server.bananadev.json');
     <link rel="stylesheet" href="./assets/css/style.css">
   </head>
   <body class="mdc-typography">
+
+    <!-- LOADING SPINNER -->
     <div id="loading-spinner" class="loading-spinner_large">
         <div class="loading-spinner"></div>
     </div>
+    <!-- LOADING SPINNER -->
+
+    <!-- SECTION -->
     <section id="section1">
+
+      <!-- HEADER -->
       <div class="header shadow-light">
         <div class="header-columns">
           <div class="header-column-logo"></div>
@@ -53,26 +60,34 @@ readClient('server.bananadev.json');
           <div class="header-column-menu"><a href="#about"><i class="material-icons">help</i></a></div>
         </div>
       </div>
+      <!-- HEADER -->
+
+      <!-- CONTENT -->
       <div class="content">
         <div class="clients-list">
           <div class="clients-list-clients">
+            <!-- <div class="clients-list_client_first">
+              <a class="client-list_link_first" href="#dashboard" data-client="dashboard">dashboard</a>
+            </div> -->
             <div class="clients-list_client">
-              <a class="client-list_link" href="#dashboard" data-client="dashboard">dashboard</a>
+             <a class="client-list_link" href="#dashboard" data-client="dashboard">dashboard</a>
             </div>
             <?php $clientsList = listClientsAsList(); echo $clientsList; ?>
           </div>
           <div class="client-list-icons">
             <div class="clients-list_icon" id="icon--add-client">
-              <a class="client-list_link" href="#add-client"><i class="material-icons">add</i></a>
+              <a class="client-list_icon-link" href="#add-client"><i class="material-icons">add</i></a>
             </div>
             <div class="clients-list_icon" id="icon--refresh-clients">
-              <a class="client-list_link" href="#refresh-clients"><i class="material-icons">refresh</i></a>
+              <a class="client-list_icon-link" href="#refresh-clients"><i class="material-icons">refresh</i></a>
             </div>
           </div>
         </div>
         <div class="client-list_data-container"></div>
       </div>
+      <!-- CONTENT -->
 
+      <!-- FOOTER -->
       <div class="footer shadow-light">
         <div class="footer-column">
           <div class="icons">
@@ -81,14 +96,17 @@ readClient('server.bananadev.json');
                 <div class="tooltip" id="tooltip-github">GITHUB</div>
               </div>
             </a>
-            <!-- <a href="https://github.com/gemichelst/stateSRV"><div class="icon" id="icon--sourceforge"><div class="tooltip" id="tooltip-sourceforge">SOURCEFORGE</div></div></a> -->
           </div>
         </div>
         <div class="footer-column">
           GeMichelst.de <?php echo date('Y'); ?>
         </div>
       </div>
+      <!-- FOOTER -->
+
     </section>
+    <!-- SECTION -->
+
   </body>
   <script type="text/javascript" src="./lib/node_modules/jquery/dist/jquery.min.js"></script>
   <script type="text/javascript" src="./lib/libs/jquery/plugins/jquery.easing.js"></script>
