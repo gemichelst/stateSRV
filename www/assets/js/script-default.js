@@ -54,7 +54,7 @@ $(".client-list_link").click(function(){
 	// TABLE_TABLE OUT
 	$(".mdc-data-table").animate({
 		"opacity": 0,
-		"height": "0vh"
+		"height": "0%"
 	}, 300, 'easeInQuint');
 
 	// LOAD CONTENT
@@ -109,7 +109,7 @@ $(".client-list_link").click(function(){
 					$(html).appendTo('.client-list_data-container');
 					$(".mdc-data-table").animate({
 						"opacity": 1,
-						"height": "73vh"
+						"height": "100%"
 					}, 500, 'easeInQuint');
 				}, 800);
 

@@ -158,13 +158,6 @@ section header h2 {
   color: #ff4136;
   padding: 0 1vh 0 1vh;
 }
-#icon--add-client {
-  background: none;
-}
-#icon--refresh-clients {
-  position: absolute;
-  left: 82vw;
-}
 #icon--github {
   background: url("../images/icons/github.svg") center no-repeat;
   background-size: cover;
@@ -338,12 +331,21 @@ section header h2 {
 #section1 .content .clients-list {
   color: #fff;
   margin-top: 6.5vh;
+  max-height: 2vh;
+  height: 100%;
 }
-#section1 .content .clients-list .clients-list_icon {
-  float: left;
+#section1 .content .clients-list .client-list-icons {
+  position: absolute;
+  width: 100%;
+  max-width: 10.75vw;
+  height: 6vh;
+  right: 13.5vw;
+}
+#section1 .content .clients-list .client-list-icons .clients-list_icon {
+  float: right;
   padding: 1.5vh 0.5vw 1vh 2vw;
 }
-#section1 .content .clients-list .clients-list_icon a {
+#section1 .content .clients-list .client-list-icons .clients-list_icon a {
   color: rgba(255,255,255,0.75);
   font-weight: 500;
   text-decoration: none;
@@ -351,14 +353,20 @@ section header h2 {
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
-#section1 .content .clients-list .clients-list_icon a:hover {
+#section1 .content .clients-list .client-list-icons .clients-list_icon a:hover {
   color: #fff;
 }
-#section1 .content .clients-list .clients-list_client {
+#section1 .content .clients-list .clients-list-clients {
+  height: 6vh;
+  position: absolute;
+  max-width: 60vw;
+  width: 100%;
+}
+#section1 .content .clients-list .clients-list-clients .clients-list_client {
   float: left;
   padding: 1.5vh 0.5vw 1vh 2vw;
 }
-#section1 .content .clients-list .clients-list_client a {
+#section1 .content .clients-list .clients-list-clients .clients-list_client a {
   color: rgba(255,255,255,0.75);
   font-weight: 500;
   text-decoration: none;
@@ -366,11 +374,11 @@ section header h2 {
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
-#section1 .content .clients-list .clients-list_client a:hover {
+#section1 .content .clients-list .clients-list-clients .clients-list_client a:hover {
   color: #fff;
   border-bottom: 1px solid #fff;
 }
-#section1 .content .clients-list .clients-list_client:nth-of-type(1) a {
+#section1 .content .clients-list .clients-list-clients .clients-list_client:nth-of-type(1) a {
   color: #fff;
   font-weight: 500;
   text-decoration: none;
@@ -378,13 +386,14 @@ section header h2 {
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
-#section1 .content .clients-list .clients-list_client:nth-of-type(1) a:hover {
+#section1 .content .clients-list .clients-list-clients .clients-list_client:nth-of-type(1) a:hover {
   color: #fff;
   border-bottom: 1px solid #fff;
 }
 #section1 .content .client-list_data-container {
   height: 100%;
   padding-top: 4.5vh;
+  margin-top: -2vh;
   box-shadow: 0px 7px 9px -4px rgba(0,0,0,0.2), 0px 14px 21px 2px rgba(0,0,0,0.14), 0px 5px 26px 4px rgba(0,0,0,0.12);
 }
 #section1 .content .client-list_data-container .client-list_data-table .client-list_data-table_content {
@@ -534,6 +543,7 @@ section header h2 {
   width: 100%;
   height: 0vh;
   opacity: 0;
+  margin-top: 1vh;
 }
 .mdc-data-table#mdc-data-table .mdc-data-table__icon {
   text-align: center;

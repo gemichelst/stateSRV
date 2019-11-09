@@ -68,43 +68,57 @@
 		.clients-list
 			color $white
 			margin-top 6.5vh
-			.clients-list_icon
-				float left
-				padding 1.5vh 0.5vw 1vh 2vw
-				a
-					color rgba(255,255,255,.75)
-					font-weight 500
-					text-decoration none
-					line-height 1.75
-					transition all .25s ease-in-out
-					&:hover
+			max-height 2vh
+			height 100%
+			.client-list-icons
+				position absolute
+				width 100%
+				max-width 10.75vw
+				height 6vh
+				right 13.5vw
+				.clients-list_icon
+					float right
+					padding 1.5vh 0.5vw 1vh 2vw
+					a
+						color rgba(255,255,255,.75)
+						font-weight 500
+						text-decoration none
+						line-height 1.75
+						transition all .25s ease-in-out
+						&:hover
+							color $white
+			.clients-list-clients
+				height 6vh
+				position absolute
+				max-width 60vw
+				width 100%
+				.clients-list_client
+					float left
+					padding 1.5vh 0.5vw 1vh 2vw
+					a
+						color rgba(255,255,255,.75)
+						font-weight 500
+						text-decoration none
+						line-height 1.75
+						transition all .25s ease-in-out
+						&:hover
+							color $white
+							border-bottom 1px solid $white
+				.clients-list_client:nth-of-type(1)
+					a
 						color $white
-			.clients-list_client
-				float left
-				padding 1.5vh 0.5vw 1vh 2vw
-				a
-					color rgba(255,255,255,.75)
-					font-weight 500
-					text-decoration none
-					line-height 1.75
-					transition all .25s ease-in-out
-					&:hover
-						color $white
+						font-weight 500
+						text-decoration none
 						border-bottom 1px solid $white
-			.clients-list_client:nth-of-type(1)
-				a
-					color $white
-					font-weight 500
-					text-decoration none
-					border-bottom 1px solid $white
-					transition all .25s ease-in-out
-					&:hover
-						color $white
-						border-bottom 1px solid $white
+						transition all .25s ease-in-out
+						&:hover
+							color $white
+							border-bottom 1px solid $white
 		.client-list_data-container
 			// height 79.5vh
 			height 100%
 			padding-top 4.5vh
+			margin-top -2vh
 			box-shadow 0px 7px 9px -4px rgba(0, 0, 0, 0.2), 0px 14px 21px 2px rgba(0, 0, 0, 0.14), 0px 5px 26px 4px rgba(0, 0, 0, 0.12)
 			.client-list_data-table
 				// min-height 75vh
