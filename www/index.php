@@ -55,19 +55,19 @@ readClient('server.bananadev.json');
       </div>
       <div class="content">
         <div class="clients-list">
-          <div class="client-list-icons">
-            <div class="clients-list_icon" id="icon--refresh-clients">
-              <a class="client-list_link" href="#refresh-clients"><i class="material-icons">refresh</i></a>
-            </div>
-            <div class="clients-list_icon" id="icon--add-client">
-              <a class="client-list_link" href="#add-client"><i class="material-icons">add</i></a>
-            </div>
-          </div>
           <div class="clients-list-clients">
             <div class="clients-list_client">
               <a class="client-list_link" href="#dashboard" data-client="dashboard">dashboard</a>
             </div>
             <?php $clientsList = listClientsAsList(); echo $clientsList; ?>
+          </div>
+          <div class="client-list-icons">
+            <div class="clients-list_icon" id="icon--add-client">
+              <a class="client-list_link" href="#add-client"><i class="material-icons">add</i></a>
+            </div>
+            <div class="clients-list_icon" id="icon--refresh-clients">
+              <a class="client-list_link" href="#refresh-clients"><i class="material-icons">refresh</i></a>
+            </div>
           </div>
         </div>
         <div class="client-list_data-container"></div>

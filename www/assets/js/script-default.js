@@ -43,13 +43,21 @@ $(".client-list_link").click(function(){
 
 	// RESET
 	$(".client-list_link").css({
-		"border-bottom": "none",
-		"color": "rgba(255,255,255,.75)",
+		"color": "rgba(255,255,255,0.75)",
+		"background": "rgba(25,41,41,0.5)",
+		"border": "unset",
+		"border-top-right-radius": "unset",
+		"border-top-left-radius": "unset",
+		"padding": "unset"
 	});
 	// SET THIS
 	$(this).css({
-		"border-bottom": "1px solid white",
-		"color": "white",
+		"color": "rgba(25,41,41,0.5)",
+		"background": "white",
+		"border": "2px solid white",
+		"border-top-right-radius": "10px",
+		"border-top-left-radius": "10px",
+		"padding": "1vh 2vw 2vh 2vw"
 	});
 	// TABLE_TABLE OUT
 	$(".mdc-data-table").animate({
