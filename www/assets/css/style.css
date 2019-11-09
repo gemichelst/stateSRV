@@ -510,6 +510,9 @@ section header h2 {
     width: 100%;
     max-width: 100vw;
   }
+  #section1 .header .header-columns .header-column-menu {
+    padding-right: 2vw;
+  }
   #section1 .content {
     width: 100%;
     max-width: 100vw;
@@ -518,6 +521,13 @@ section header h2 {
     width: 100%;
     max-width: 100vw;
     font-size: 0.75rem;
+  }
+  #icon--refresh-clients {
+    position: absolute;
+    left: 88vw;
+  }
+  .material-icons {
+    font-size: 4vh !important;
   }
 }
 .mdc-data-table#mdc-data-table {
