@@ -97,8 +97,9 @@ body {
   font-family: 'Roboto', sans-serif;
   color: rgba(0,0,0,0.8);
   font-size: 16px;
-  background: #378184;
-  background: linear-gradient(50deg, #378184 5%, #284b4c 55%);
+  background: url("../images/background/background-lines.png") top left no-repeat;
+  background-size: cover;
+  background-blend-mode: darken;
 }
 img {
   max-width: 100%;
