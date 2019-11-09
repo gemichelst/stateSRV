@@ -64,6 +64,32 @@ readClient('server.bananadev.json');
 
       <!-- CONTENT -->
       <div class="content">
+
+
+      <!-- ADD NEW CLIENT -->
+      <div id="add-client">
+        <form id="form-add-client" method="post" accept="<?php echo $PHP_SELF; ?>">
+          <div class="mdc-text-field mdc-text-field--with-leading-icon" id="input-new-client-adress">
+            <i class="material-icons mdc-text-field__icon">laptop</i>
+            <input class="mdc-text-field__input" id="text-field-hero-input">
+            <div class="mdc-line-ripple"></div>
+            <label for="text-field-hero-input" class="mdc-floating-label">PROTOCOL://IP:PORT</label>
+          </div>
+          <div class="mdc-text-field mdc-text-field--with-leading-icon" id="input-new-client-name">
+             <i class="material-icons mdc-text-field__icon">laptop</i>
+             <input class="mdc-text-field__input" id="text-field-hero-input">
+             <div class="mdc-line-ripple"></div>
+             <label for="text-field-hero-input" class="mdc-floating-label">DEVICE NAME</label>
+          </div>
+          <button id="button-add-client" class="mdc-button mdc-button--raised" type="submit">
+            <span class="mdc-button__ripple"></span>
+            <i class="material-icons mdc-button__icon">add</i>
+            <span class="mdc-button__label">ADD</span>
+          </button>
+        </form>
+      </div>
+
+
         <div class="clients-list">
           <div class="clients-list-clients">
             <!-- <div class="clients-list_client_first">

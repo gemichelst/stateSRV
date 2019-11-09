@@ -519,6 +519,9 @@ section header h2 {
 #section1 .footer .footer-column:nth-of-type(2) {
   text-align: right;
 }
+#add-client {
+  display: none;
+}
 @media (max-width: 800px) and (min-width: 300px) {
   #section1 {
     max-width: 100vw;
@@ -572,6 +575,48 @@ section header h2 {
   opacity: 1;
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
+}
+.mdc-form-field {
+  max-width: 50vw;
+  width: 100%;
+  height: auto;
+  margin-left: 2vw;
+  margin-right: auto;
+  float: none;
+}
+.mdc-text-field__input {
+  font-size: 1.25rem !important;
+  padding-top: 2%;
+  padding-left: 20% !important;
+}
+.mdc-floating-label {
+  top: 50% !important;
+  left: 20% !important;
+  color: #000 !important;
+  font-size: 1rem !important;
+  font-weight: 300;
+}
+.mdc-button {
+  font-size: 1rem;
+  background-color: #284b4c !important;
+  color: #fff;
+  height: 5.7vh;
+}
+#input-new-client-adress {
+  width: 100%;
+  max-width: 30vw;
+  margin-left: 2vw;
+}
+#input-new-client-name {
+  width: 100%;
+  max-width: 30vw;
+  margin-left: 2vw;
+}
+#button-add-client {
+  width: 100%;
+  max-width: 30vw;
+  margin-top: 2vh;
+  margin-left: 2vw;
 }
 .loading-spinner_small {
   top: 0.5rem;

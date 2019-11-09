@@ -7,6 +7,27 @@
 // DONT CHANGE CODE IF YOU NOT KNOW WHAT TO DO!     //
 //**************************************************//
 const debug = false;
+console.log('debug: '+debug);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -16,6 +37,9 @@ const debug = false;
 
 
 //////// DOCUMENT FUNCTIONS ////////////////////////////////////////////
+function debugOUT(text,debug){
+    if (debug==true){ console.log(text); }
+}
 function loadingSpinner(){
 	// IN
 	$("#loading-spinner").css({ "display": "block", "opacity": 1 });
@@ -33,7 +57,7 @@ function animatedContentLoader(html){
     }, 300, 'easeInQuint');
 
     // DEBUG
-    if (debug == true) { console.log('html: ' + html); }
+    debugOUT('html: '+html,debug);
 
 	/// LOAD CONTENT WITH ANIMATION
 	setTimeout(function() {
@@ -79,6 +103,12 @@ function resetActiveLinks(){
 
 $(document).ready(function() {
 
+    // INPUT/TEXTFIELDS
+    $(".mdc-text-field").click(function() {
+        $(this).find(".mdc-floating-label").remove().css({"display": "none"});
+    });
+
+
     ///////////////////////////////////
 	// CONTENT/SETTINGS/ACTION LINKS //
     ///////////////////////////////////
@@ -95,17 +125,13 @@ $(document).ready(function() {
             childElement='.material-icons';
             thisAndChildElement=$(this).next();
 
-        if (debug==true) {
-            console.log('thisElement:' + thisElement);
-            console.log('childElement: ' + childElement);
-            console.log('thisAndChildElement: ' + thisAndChildElement);
-        }
+                debugOUT('thisElement:' + thisElement,debug);
+                debugOUT('childElement: ' + childElement,debug);
+                debugOUT('thisAndChildElement: ' + thisAndChildElement,debug);
 
         // DATALINK ATTR
         var dataLink = $(this).attr('data-link');
-        if (debug == true) { 
-            console.log('dataLink: ' + dataLink);
-        }
+            debugOUT('dataLink: ' + dataLink,debug);
 
         // ACTIVE THIS AND ICON
         $(this).css({
@@ -205,12 +231,12 @@ $(document).ready(function() {
 
         // LOAD CONTENT
         var dataClient = $(this).attr('data-client');
-        if (debug == true) { console.log('dataClient: ' + dataClient); }
+            debugOUT('dataClient: '+dataClient,debug);
 
 		// CLIENT DATA
         var dataClientFile = $(this).attr('data-client-file');
         dataClientFile = './tmp/' + dataClientFile;
-        if (debug == true) { console.log('dataClientFile: ' + dataClientFile); }
+            debugOUT('dataClientFile: ' + dataClientFile,debug);
 
         var clients = jQuery.getJSON(dataClientFile, function(data) {
             $.each(data, function(key, val) {
