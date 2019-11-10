@@ -14,5 +14,5 @@ chown -R www-data:www-data www/
 echo "> chmod conf data tmp"
 chmod -R 0775 conf/ 
 chmod -R 0775 data/
-chmod -R 0775 www/tmp/ 
+chmod -R 0777 www/tmp/ 
 exit 0

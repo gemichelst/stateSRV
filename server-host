@@ -19,9 +19,16 @@ do
 	echo "> GRABBING CLIENT$CLIENTSNUM $CLIENTNAME"
 	echo "	URL:	$CLIENTURL"
 	echo "	JSON:	$CLIENTJSON"
+	INDEXHTML="$CURDIR/index.html"
 	CLIENTJSONDIR="$CURDIR/data/$CLIENTJSON"
-	DOWNLOAD=$(wget --quiet --no-check-certificate --show-progress --progress=bar:force $CLIENTURL)
-	MOVE=$(mv ./index.html $CLIENTJSONDIR)
+	if [ -f /usr/local/bin/wget ]
+	then
+		WGET="/usr/local/bin/wget"
+	else
+		WGET=$(which wget)
+	fi
+	DOWNLOAD=$($WGET --quiet --no-check-certificate --show-progress --progress=bar:force -O $CLIENTJSONDIR $CLIENTURL)
+	# MOVE=$(mv $INDEXHTML $CLIENTJSONDIR)
 	CLIENTSNUM=$((CLIENTSNUM+1));
 done
 

@@ -1,0 +1,7 @@
+./server-host: line 6: declare: -A: invalid option
+declare: usage: declare [-afFirtx] [-p] [name[=value] ...]
+> found 1 clients
+> GRABBING CLIENT0 0
+	URL:	http://192.168.11.19:7236http://192.168.11.20:7236http://192.168.11.22:7236
+	JSON:	server.0.json
+./server-host: line 24: wget: command not found

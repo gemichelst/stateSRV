@@ -232,12 +232,15 @@ $(document).ready(function() {
                 $BINDIR         = $SPLITDIR[0];
                 $BINCMD         = 'server-host';
                 $BINFULL        = $BINDIR.$BINCMD;
-                $BASHEXEC       = "cd ".$BINDIR."; bash ./".$BINCMD." 2>&1";
+                // $BASHEXEC       = "cd ".$BINDIR."; bash ./".$BINCMD." 2>&1";
+                $EXECOUTPUTFILE = date('dmYHis').".log";
+                $LOGFILE        = $_SERVER['DOCUMENT_ROOT']."/tmp/".$EXECOUTPUTFILE;
+                $BASHEXEC       = "cd ".$BINDIR."; rm www/tmp/*.log; bash ./".$BINCMD." 2>&1 | tee ".$LOGFILE;
                 $EXECOUTPUT     .= "<pre>".exec("$BASHEXEC")."</pre>";
                 $EXECMESSAGE    = (!$EXECOUTPUT) ? 'An Error has occured while executing the REFRESH command. Please read the following STDOUT:' : 'The Refresh command was executed succesfull. STDOUT:';
                 $EXECMSGTITLE   = (!$EXECOUTPUT) ? 'REFRESH FAILED' : 'REFRESH DONE';
                 $EXECMSGICON    = (!$EXECOUTPUT) ? 'error' : 'check_circle';
-                $EXECOUTPUT     = '<div class="msg--container"><div class="msg--container_icon"><i class="material-icons">'.$EXECMSGICON.'</i></div><div class="msg--container_title">'.$EXECMSGTITLE.'</div><div class="msg--container_message"><p>'.$EXECMESSAGE.'</p></div></div><div class="exec-output">'.$EXECOUTPUT.'</div>';
+                $EXECOUTPUT     = '<div class="msg--container"><div class="msg--container_icon"><i class="material-icons">'.$EXECMSGICON.'</i></div><div class="msg--container_title">'.$EXECMSGTITLE.'</div><div class="msg--container_message"><p>'.addslashes($EXECMESSAGE).'</p></div></div><div class="exec-output">'.addslashes($EXECOUTPUT).'</div>';
                 
             # COPYING FILES FROM DATA FOLDER TO WWW/TMP
             #
