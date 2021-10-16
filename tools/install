@@ -1,6 +1,5 @@
 #!/bin/bash
 # INSTALL TO $1
-#
 echo "#========================"
 echo "# stateSRV Installation #"
 echo "# v16102021             #"
